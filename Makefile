@@ -6,23 +6,36 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/15 15:44:46 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/15 22:08:55 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = 	srcs/ft_putchar.c\
-	srcs/ft_putstr.c\
-	srcs/ft_strcmp.c\
-	srcs/ft_strlen.c\
-	srcs/ft_swap.c
+SRCS = 	./ft_isalpha.c\
+		./ft_strlcat.c\
+		./ft_bzero.c\
+		./ft_strdup.c\
+		./ft_toupper.c\
+		./ft_strstr.c\
+		./ft_memcpy.c\
+		./ft_atoi.c\
+		./ft_strcmp.c\
+		./ft_memset.c\
+		./ft_tolower.c\
+		./ft_isprint.c\
+		./ft_strncat.c\
+		./ft_isascii.c\
+		./ft_strcat.c\
+		./ft_strncpy.c\
+		./ft_memccpy.c\
+		./ft_isdigit.c\
+		./ft_strncmp.c\
+		./ft_strlen.c\
+		./ft_isalnum.c\
+		./ft_strcpy.c
 
-OUT = 	ft_putchar.o\
-	ft_putstr.o\
-	ft_strcmp.o\
-	ft_strlen.o\
-	ft_swap.o
+OUT = *.o
 
 INCL = ./
 

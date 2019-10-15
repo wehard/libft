@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char	*ft_strstr(char *haystack, const char *needle)
 {
 	int c1;
 	int c2;
 
 	if (!*needle)
-		return (haystack);
+		return ((char*)haystack);
 	c1 = 0;
 	while (haystack[c1] != '\0')
 	{
@@ -27,7 +27,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 			{
 				if (needle[c2 + 1] == '\0')
 				{
-					return (haystack += c1);
+					haystack += c1;
+					return ((char*)haystack);
 				}
 				c2++;
 			}
