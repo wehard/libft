@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:43:43 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/15 15:11:34 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/15 16:41:04 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		p[i] = c;
 		i++;
 	}
+	return (b);
 }
