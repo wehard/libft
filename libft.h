@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/15 16:28:43 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/15 16:55:11 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
-// strcat
-// strncat
-// strlcat
+char	*ft_strcat(char *dest, char *src);
+char	*ft_strncat(char *dest, char *src, int nb);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 // strchr
 // strrchr
-// strstr
+char	*ft_strstr(const char *haystack, const char *needle);
 // strnstr
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
