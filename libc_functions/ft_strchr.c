@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:50:47 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 16:07:14 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/16 17:21:34 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_strchr(const char *s, int c)
 
 	if (c == '\0')
 		return ((char*)s + ft_strlen(s));
-
 	i = 0;
 	while (s[i] != '\0')
 	{

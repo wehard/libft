@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:29:40 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 15:37:32 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/16 17:21:22 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	str1 = (unsigned char*)s1;
 	str2 = (unsigned char*)s2;
-
 	i = 0;
 	while (i < n)
 	{
