@@ -6,40 +6,40 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/16 16:28:19 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/16 17:07:58 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = 	./ft_isalpha.c\
-		./ft_strlcat.c\
-		./ft_bzero.c\
-		./ft_strdup.c\
-		./ft_toupper.c\
-		./ft_strstr.c\
-		./ft_strnstr.c\
-		./ft_memcpy.c\
-		./ft_memchr.c\
-		./ft_memcmp.c\
-		./ft_memmove.c\
-		./ft_atoi.c\
-		./ft_strcmp.c\
-		./ft_strchr.c\
-		./ft_strrchr.c\
-		./ft_memset.c\
-		./ft_tolower.c\
-		./ft_isprint.c\
-		./ft_strncat.c\
-		./ft_isascii.c\
-		./ft_strcat.c\
-		./ft_strncpy.c\
-		./ft_memccpy.c\
-		./ft_isdigit.c\
-		./ft_strncmp.c\
-		./ft_strlen.c\
-		./ft_isalnum.c\
-		./ft_strcpy.c
+SRCS = 	./libc_functions/ft_isalpha.c\
+		./libc_functions/ft_strlcat.c\
+		./libc_functions/ft_bzero.c\
+		./libc_functions/ft_strdup.c\
+		./libc_functions/ft_toupper.c\
+		./libc_functions/ft_strstr.c\
+		./libc_functions/ft_strnstr.c\
+		./libc_functions/ft_memcpy.c\
+		./libc_functions/ft_memchr.c\
+		./libc_functions/ft_memcmp.c\
+		./libc_functions/ft_memmove.c\
+		./libc_functions/ft_atoi.c\
+		./libc_functions/ft_strcmp.c\
+		./libc_functions/ft_strchr.c\
+		./libc_functions/ft_strrchr.c\
+		./libc_functions/ft_memset.c\
+		./libc_functions/ft_tolower.c\
+		./libc_functions/ft_isprint.c\
+		./libc_functions/ft_strncat.c\
+		./libc_functions/ft_isascii.c\
+		./libc_functions/ft_strcat.c\
+		./libc_functions/ft_strncpy.c\
+		./libc_functions/ft_memccpy.c\
+		./libc_functions/ft_isdigit.c\
+		./libc_functions/ft_strncmp.c\
+		./libc_functions/ft_strlen.c\
+		./libc_functions/ft_isalnum.c\
+		./libc_functions/ft_strcpy.c
 
 OUT = *.o
 
