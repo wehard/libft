@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:04:45 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/15 14:05:28 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/16 11:18:19 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) && ft_isdigit(c));
+	return (ft_isalpha(c) | ft_isdigit(c));
 }
