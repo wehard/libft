@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 15:38:05 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/16 15:54:34 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strncat(char *dest, char *src, int nb);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-// strchr
+char	*ft_strchr(const char *s, int c);
 // strrchr
 char	*ft_strstr(const char *haystack, const char *needle);
 // strnstr
