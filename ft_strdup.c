@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:27:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/15 14:40:07 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/16 10:35:25 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_strdup(const char *s1)
 		s1++;
 		dup++;
 	}
-	dup = '\0';
+	*dup = '\0';
 	return (dup);
 }
