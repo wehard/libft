@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/16 15:57:37 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/16 16:28:19 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS = 	./ft_isalpha.c\
 		./ft_strdup.c\
 		./ft_toupper.c\
 		./ft_strstr.c\
+		./ft_strnstr.c\
 		./ft_memcpy.c\
 		./ft_memchr.c\
 		./ft_memcmp.c\
@@ -25,6 +26,7 @@ SRCS = 	./ft_isalpha.c\
 		./ft_atoi.c\
 		./ft_strcmp.c\
 		./ft_strchr.c\
+		./ft_strrchr.c\
 		./ft_memset.c\
 		./ft_tolower.c\
 		./ft_isprint.c\

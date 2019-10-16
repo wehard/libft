@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:50:47 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 15:59:12 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:07:14 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ char	*ft_strchr(const char *s, int c)
 {
 	size_t			i;
 
+	if (c == '\0')
+		return ((char*)s + ft_strlen(s));
+
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -23,5 +26,5 @@ char	*ft_strchr(const char *s, int c)
 			return ((char*)s + i);
 		i++;
 	}
-	return ((char*)s + i);
+	return (NULL);
 }
