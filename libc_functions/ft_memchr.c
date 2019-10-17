@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 14:47:49 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 15:25:10 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/17 11:08:52 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (str[i] == c)
-			return (str + i);
+		if (str[i] == (unsigned char)c)
+			return ((void*)(str + i));
 		i++;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:27:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 10:35:25 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/17 11:17:43 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,19 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char *dup;
+	char	*dup;
+	int		i;
 
-	dup = (char*)malloc(sizeof(*s1) * ft_strlen(s1) + 1);
+	dup = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (dup == NULL)
 		return (NULL);
+	i = 0;
 	while (*s1 != '\0')
 	{
-		*dup = *s1;
+		dup[i] = *s1;
 		s1++;
-		dup++;
+		i++;
 	}
-	*dup = '\0';
+	dup[i] = '\0';
 	return (dup);
 }
