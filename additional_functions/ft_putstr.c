@@ -6,10 +6,11 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:31:04 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 17:32:13 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:32:54 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr(char const *s)

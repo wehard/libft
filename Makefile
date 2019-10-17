@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/16 20:54:02 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/17 16:22:23 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,24 @@ SRCS = 	./libc_functions/ft_isalpha.c\
 		./libc_functions/ft_strncmp.c\
 		./libc_functions/ft_strlen.c\
 		./libc_functions/ft_isalnum.c\
-		./libc_functions/ft_strcpy.c
+		./libc_functions/ft_strcpy.c\
+		./additional_functions/ft_memalloc.c\
+		./additional_functions/ft_memdel.c\
+		./additional_functions/ft_strnew.c\
+		./additional_functions/ft_strdel.c\
+		./additional_functions/ft_strclr.c\
+		./additional_functions/ft_striter.c\
+		./additional_functions/ft_striteri.c\
+		./additional_functions/ft_putchar.c\
+		./additional_functions/ft_putchar_fd.c\
+		./additional_functions/ft_putnbr.c\
+		./additional_functions/ft_putnbr_fd.c\
+		./additional_functions/ft_putstr.c\
+		./additional_functions/ft_putstr_fd.c\
+		./additional_functions/ft_putendl.c\
+		./additional_functions/ft_putendl_fd.c\
+		./additional_functions/ft_itoa.c\
+		./additional_functions/ft_strrev.c
 
 OUT = *.o
 

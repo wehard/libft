@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 17:34:31 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 17:40:34 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:35:52 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 	{
-		ft_putnbr(long_nb / 10);
-		ft_putnbr(long_nb % 10);
+		ft_putnbr_fd(long_nb / 10, fd);
+		ft_putnbr_fd(long_nb % 10, fd);
 	}
 }
