@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 15:41:29 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/17 11:07:53 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:21:09 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	size_t			i;
 
 	if (dst == NULL || src == NULL)
-		return (NULL);
+		return (0);
 	d = (unsigned char*)dst;
 	s = (unsigned char*)src;
 	i = 0;
