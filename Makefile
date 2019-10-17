@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/17 16:22:23 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/17 16:28:57 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ SRCS = 	./libc_functions/ft_isalpha.c\
 		./additional_functions/ft_putendl.c\
 		./additional_functions/ft_putendl_fd.c\
 		./additional_functions/ft_itoa.c\
-		./additional_functions/ft_strrev.c
+		./extra_functions/ft_strrev.c
 
 OUT = *.o
 
