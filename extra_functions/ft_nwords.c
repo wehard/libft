@@ -1,24 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_nwords.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 14:48:31 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 15:17:42 by wkorande         ###   ########.fr       */
+/*   Created: 2019/10/18 12:28:18 by wkorande          #+#    #+#             */
+/*   Updated: 2019/10/18 13:45:14 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int		ft_nwords(char *str, char delim)
 {
-	unsigned char *p;
+	int word;
+	int n;
+	int i;
 
-	if (n <= 0)
-		return ;
-	p = (unsigned char*)s;
-	while (n-- > 0)
-		*(p++) = 0;
+	if (!str || !delim)
+		return (0);
+	word = 0;
+	n = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] != delim)
+		{
+			if (word == 0)
+			{
+				word = 1;
+				n++;
+			}
+		}
+		else if (str[i] == delim)
+			word = 0;
+		i++;
+	}
+	return (n);
 }

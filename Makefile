@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/17 17:21:58 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/18 16:03:48 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRCS = 	./libc_functions/ft_isalpha.c\
 		./additional_functions/ft_strsub.c\
 		./additional_functions/ft_strjoin.c\
 		./additional_functions/ft_strtrim.c\
+		./additional_functions/ft_strsplit.c\
 		./additional_functions/ft_putchar.c\
 		./additional_functions/ft_putchar_fd.c\
 		./additional_functions/ft_putnbr.c\
@@ -63,7 +64,9 @@ SRCS = 	./libc_functions/ft_isalpha.c\
 		./additional_functions/ft_putendl.c\
 		./additional_functions/ft_putendl_fd.c\
 		./additional_functions/ft_itoa.c\
-		./extra_functions/ft_strrev.c
+		./extra_functions/ft_strrev.c\
+		./extra_functions/ft_nwords.c\
+		./extra_functions/ft_ndigits.c
 
 OUT = *.o
 

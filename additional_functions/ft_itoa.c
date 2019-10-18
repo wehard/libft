@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 14:46:08 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/17 15:51:31 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/18 16:12:24 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,26 @@
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		negative;
-	int		i;
+	char			*str;
+	unsigned int	nbr;
+	unsigned int	len;
 
-	if (!(str = (char*)malloc(sizeof(char) * 13)))
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n < 0)
+		nbr = (unsigned int)(n * -1);
+	else
+		nbr = (unsigned int)n;
+	len = (unsigned int)ft_ndigits(n) + (n < 0);
+	if (!(str = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	i = 0;
-	negative = 0;
-	if (n == 0)
+	str[len] = '\0';
+	while (len--)
 	{
-		str[i++] = '0';
-		str[i] = '\0';
-		return (str);
+		str[len] = (nbr % 10) + '0';
+		nbr /= 10;
 	}
 	if (n < 0)
-	{
-		negative = 1;
-		n *= -1;
-	}
-	while (n != 0)
-	{
-		str[i++] = (n % 10) + '0';
-		n /= 10;
-	}
-	if (negative)
-		str[i++] = '-';
-	str[i] = '\0';
-	return (ft_strrev(str));
+		str[0] = '-';
+	return (str);
 }

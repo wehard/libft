@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_ndigits.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 14:48:31 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 15:17:42 by wkorande         ###   ########.fr       */
+/*   Created: 2019/10/18 14:44:45 by wkorande          #+#    #+#             */
+/*   Updated: 2019/10/18 14:50:36 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+int	ft_ndigits(int n)
 {
-	unsigned char *p;
+	int i;
 
-	if (n <= 0)
-		return ;
-	p = (unsigned char*)s;
-	while (n-- > 0)
-		*(p++) = 0;
+	i = 0;
+	while (n != 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }

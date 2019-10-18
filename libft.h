@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/17 17:21:37 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/18 14:47:28 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
-//char	**ft_strsplit(char const *s, char c);
+char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
@@ -75,9 +75,15 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-char	*ft_strrev(char *str);
 /*
 ** bonus functions
 */
+
+/*
+** extra functions
+*/
+char	*ft_strrev(char *str);
+int		ft_nwords(char *str, char delim);
+int		ft_ndigits(int n);
 
 #endif
