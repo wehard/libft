@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 14:46:08 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 16:33:49 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/18 16:41:15 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	if (n < 0)
 		nbr = (unsigned int)(n * -1);
 	else

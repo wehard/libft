@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 12:09:06 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 14:30:45 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/18 16:43:33 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_wordlen(char *str, char end)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**strs;
 	int		nwords;
@@ -33,10 +33,8 @@ char	**ft_strsplit(char const *s, char c)
 	nwords = ft_nwords((char*)s, c);
 	if (nwords == 0)
 		return (NULL);
-
 	if (!(strs = (char**)malloc(sizeof(char*) * nwords + 1)))
 		return (NULL);
-
 	i = 0;
 	while (i < nwords)
 	{
