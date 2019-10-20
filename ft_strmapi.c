@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 16:52:40 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/17 16:53:32 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 15:20:40 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i] != '\0')
 	{
-		map[i] = f(s[i], i);
+		map[i] = f(i, s[i]);
 		i++;
 	}
 	map[i] = '\0';
