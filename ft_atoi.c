@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:12:14 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/20 15:14:14 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 17:01:57 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ int	ft_atoi(const char *str)
 		res = res * 10 + (*str - '0');
 		str++;
 	}
-	return (res * sign);
+	return (sign * res);
 }
