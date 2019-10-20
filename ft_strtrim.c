@@ -6,10 +6,11 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 17:22:17 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 12:02:24 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 17:42:17 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s)
@@ -30,7 +31,7 @@ char	*ft_strtrim(char const *s)
 	len = end - beg + 1;
 	if (len < 0)
 		len = 0;
-	if (!(trim = (char*)ft_memalloc(len + 1)))
+	if (!(trim = (char*)malloc(len + 1)))
 		return (NULL);
 	trim = ft_strncpy(trim, (char*)s + beg, len);
 	trim[len] = '\0';

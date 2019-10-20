@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 15:41:06 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/17 15:50:48 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 17:29:08 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ void	*ft_memalloc(size_t size)
 {
 	void	*mem;
 
-	mem = (void*)malloc(size);
-	if (mem == NULL)
+	if (!(mem = (void*)malloc(size)))
 		return (NULL);
 	ft_bzero(mem, size);
 	return (mem);

@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:27:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/17 11:17:43 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 17:30:09 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ char	*ft_strdup(const char *s1)
 	char	*dup;
 	int		i;
 
-	dup = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (dup == NULL)
+	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1))))
 		return (NULL);
 	i = 0;
 	while (*s1 != '\0')

@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 16:33:38 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 14:07:18 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 17:31:48 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	if (!s || !f)
 		return (NULL);
-	map = (char*)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!map)
+	if (!(map = (char*)malloc(sizeof(char) * ft_strlen(s) + 1)))
 		return (NULL);
 	i = 0;
 	while (s[i] != '\0')
