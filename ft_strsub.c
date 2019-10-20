@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 17:03:19 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/20 17:39:45 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 17:48:50 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char *sub;
 
-	if (!s || !(sub = (char*)malloc(len + 1)))
+	if (!s || !(sub = (char*)ft_memalloc(len + 1)))
 		return (NULL);
 	sub = ft_strncpy(sub, s + start, len);
 	return (sub);
