@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 14:26:28 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/20 16:37:23 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/20 16:48:20 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	if (!src || !dst)
 		return (NULL);
-
 	d = (unsigned char*)dst;
 	s = (unsigned char*)src;
 	i = 0;
