@@ -6,11 +6,11 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:36:39 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/15 14:40:29 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/21 11:41:20 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 17:05:27 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/21 11:55:04 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char				*ft_strdup(const char *s1);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *dest, char *src);
-char				*ft_strncat(char *dest, char *src, int nb);
+char				*ft_strncat(char *dest, char *src, size_t nb);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);

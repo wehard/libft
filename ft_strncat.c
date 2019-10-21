@@ -6,14 +6,16 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:47:52 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/15 16:48:07 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/21 11:44:19 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+#include "libft.h"
+
+char	*ft_strncat(char *dest, char *src, size_t nb)
 {
-	int i;
-	int n;
+	size_t i;
+	size_t n;
 
 	i = 0;
 	while (dest[i] != '\0')

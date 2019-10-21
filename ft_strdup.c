@@ -6,12 +6,11 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:27:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/20 17:30:09 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/21 11:41:35 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
