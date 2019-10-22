@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 15:02:35 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/17 15:05:57 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/22 11:00:24 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*ft_strrev(char *str)
 	int		len;
 	char	c;
 
-	len = ft_strlen(str) - 1;
+	len = ft_strlen(str);
 	i = 0;
-	while (len > i)
+	while (i < len - 1)
 	{
-		c = str[i];
-		str[i] = str[len];
-		str[len] = c;
+		c = str[len - 1];
+		str[len - 1] = str[i];
+		str[i] = c;
 		len--;
 		i++;
 	}
