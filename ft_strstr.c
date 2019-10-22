@@ -6,11 +6,11 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:43:37 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/16 16:27:41 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/22 15:57:31 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *haystack, const char *needle)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int c1;
 	int c2;
