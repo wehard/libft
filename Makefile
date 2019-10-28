@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/24 10:13:36 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/28 12:06:08 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC =	ft_atoi.c\
 		ft_isdigit.c\
 		ft_isprint.c\
 		ft_itoa.c\
+		ft_itoa_base.c\
 		ft_memalloc.c\
 		ft_memccpy.c\
 		ft_memchr.c\
@@ -29,6 +30,7 @@ SRC =	ft_atoi.c\
 		ft_memmove.c\
 		ft_memset.c\
 		ft_ndigits.c\
+		ft_ndigits_base.c\
 		ft_nwords.c\
 		ft_putchar.c\
 		ft_putchar_fd.c\
