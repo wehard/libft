@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/10/29 16:30:31 by wkorande         ###   ########.fr        #
+#    Updated: 2019/10/29 23:08:52 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,9 @@ SRC =	ft_atoi.c\
 		ft_lstadd.c\
 		ft_lstiter.c\
 		ft_lstmap.c\
-		ft_pow.c
+		ft_pow.c\
+		ft_min.c\
+		ft_max.c
 
 SRCDIR = srcs
 
