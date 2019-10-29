@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/28 12:05:00 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/10/29 16:30:19 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ char				*ft_strrev(char *str);
 int					ft_nwords(char *str, char delim);
 int					ft_ndigits(int n);
 int					ft_ndigits_base(int n, int base);
+int					ft_pow(int n, unsigned int p);
 
 #endif
