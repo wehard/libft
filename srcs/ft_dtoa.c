@@ -6,32 +6,49 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/30 11:34:07 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/21 12:54:18 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_dtoa(double d, unsigned int precision)
+static char	*ft_fractoa(double d, int precision)
 {
-	size_t	len;
-	double	db;
-	int		dpart;
-	int		fpart;
 	char	*str;
+	double	nbr;
+	int		i;
+	int		len;
 
-	db = d < 0 ? d * -1.0 : d;
-	dpart = db;
-	db -= dpart;
-	db *= ft_pow(10, precision);
-	fpart = (unsigned long int)(db + 0.5);
-	len = ft_ndigits(dpart) + ft_ndigits(fpart) + (d < 0) + 1;
-	if (!(str = (char*)ft_memalloc(sizeof(char) * (len + 1))))
-		return (NULL);
 	if (d < 0)
-		ft_strcat(str, "-");
-	ft_strcat(str, ft_itoa(dpart));
-	ft_strcat(str, ".");
-	ft_strcat(str, ft_itoa(fpart));
+		d = -d;
+	nbr = d - (int)d;
+	len = 50;
+	if (!(str = (char*)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	ft_bzero(str, len + 1);
+	i = 0;
+	while (precision--)
+	{
+		nbr *= 10;
+		str[i++] = ((int)nbr % 10) + '0';
+	}
+	return (str);
+}
+
+char		*ft_dtoa(double d, int precision)
+{
+	char	*str;
+	char	*ds;
+	char	*fs;
+
+	if (!precision)
+		return (ft_itoa((int)d));
+	ds = ft_itoa((int)d);
+	fs = ft_fractoa(d, precision);
+	ds = ft_strjoin(ds, ".");
+	str = ft_strjoin(ds, fs);
+	free(ds);
+	free(fs);
 	return (str);
 }

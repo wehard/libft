@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/12 12:28:49 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/21 11:28:14 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int					ft_ndigits_base(int n, int base);
 int					ft_pow(int n, unsigned int p);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
-char				*ft_dtoa(double d, unsigned int precision);
+char				*ft_dtoa(double d, int precision);
 char				*ft_itoa_base(int n, char *digits);
 
 #endif
