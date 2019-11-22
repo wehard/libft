@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/11/06 18:09:37 by wkorande         ###   ########.fr        #
+#    Updated: 2019/11/22 13:53:20 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,11 @@ SRC =	ft_atoi.c\
 		ft_min.c\
 		ft_max.c\
 		ft_get_next_line.c\
-		ft_dtoa.c
+		ft_dtoa.c\
+		ft_ndigits_base_int64.c\
+		ft_itoa_int64.c\
+		ft_ndigits_base_uint64.c\
+		ft_itoa_base_uint64.c
 
 SRCDIR = srcs
 

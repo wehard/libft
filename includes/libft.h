@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/21 11:28:14 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/22 13:52:48 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdint.h>
 
 typedef struct		s_list
 {
@@ -107,5 +108,9 @@ int					ft_min(int a, int b);
 int					ft_max(int a, int b);
 char				*ft_dtoa(double d, int precision);
 char				*ft_itoa_base(int n, char *digits);
+int					ft_ndigits_base_int64(int64_t n, int base);
+char				*ft_itoa_int64(int64_t n);
+int					ft_ndigits_base_uint64(u_int64_t n, int base);
+char				*ft_itoa_base_uint64(uint64_t n, char *digits);
 
 #endif
