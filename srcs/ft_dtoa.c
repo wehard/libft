@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/22 19:14:51 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/22 19:18:09 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	*ft_fractoa(double d, int precision)
 	if (d < 0)
 		d = -d;
 	nbr = d - (int)d;
-	len = 50;
+	len = 50; // !!!1
 	if (!(str = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	ft_bzero(str, len + 1);
