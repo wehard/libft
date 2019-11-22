@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/22 13:52:48 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/22 15:03:36 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,16 +101,17 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 */
 char				*ft_strrev(char *str);
 int					ft_nwords(char *str, char delim);
-int					ft_ndigits(int n);
-int					ft_ndigits_base(int n, int base);
 int					ft_pow(int n, unsigned int p);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
 char				*ft_dtoa(double d, int precision);
 char				*ft_itoa_base(int n, char *digits);
+int					ft_ndigits(int n);
+int					ft_ndigits_base(int n, int base);
 int					ft_ndigits_base_int64(int64_t n, int base);
+int					ft_ndigits_base_uint64(uint64_t n, int base);
 char				*ft_itoa_int64(int64_t n);
-int					ft_ndigits_base_uint64(u_int64_t n, int base);
+char				*ft_itoa_uint64(uint64_t n);
 char				*ft_itoa_base_uint64(uint64_t n, char *digits);
 
 #endif
