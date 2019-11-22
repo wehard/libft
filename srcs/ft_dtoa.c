@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/21 13:10:22 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/22 19:14:51 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static char	*ft_fractoa(double d, int precision)
 		nbr *= 10.0;
 		if (precision == 0)
 			nbr += 0.5;
-		str[i++] = ((int)nbr % 10) + '0';
+		str[i++] = ((uint64_t)nbr % 10) + '0';
 	}
 	return (str);
 }
@@ -46,8 +46,8 @@ char		*ft_dtoa(double d, int precision)
 	char	*t;
 
 	if (!precision)
-		return (ft_itoa((int)d));
-	ds = ft_itoa((int)d);
+		return (ft_itoa_int64((int64_t)d));
+	ds = ft_itoa_int64((int64_t)d);
 	fs = ft_fractoa(d, precision);
 	t = ft_strjoin(ds, ".");
 	str = ft_strjoin(t, fs);
