@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/24 12:07:01 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/24 12:13:21 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ** extra functions
 */
 char				*ft_strrev(char *str);
+char 				*ft_strtok(char *src, const char *delims);
 int					ft_nwords(char *str, char delim);
 int					ft_pow(int n, unsigned int p);
 int					ft_min(int a, int b);
