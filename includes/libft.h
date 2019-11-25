@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/24 12:13:21 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/25 11:56:30 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int					ft_nwords(char *str, char delim);
 int					ft_pow(int n, unsigned int p);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
-char				*ft_dtoa(double d, int precision);
+char				*ft_dtoa(long double d, int precision);
 char				*ft_itoa_base(int n, char *digits);
 int					ft_ndigits(int n);
 int					ft_ndigits_base(int n, int base);

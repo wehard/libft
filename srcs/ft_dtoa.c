@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/25 11:31:02 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/25 13:10:18 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static char	*ft_fractoa(double d, int precision)
+static char	*ft_fractoa(long double d, int precision)
 {
 	char		*str;
 	char		*tmp;
@@ -40,7 +40,7 @@ static char	*ft_fractoa(double d, int precision)
 	return (str);
 }
 
-char		*ft_dtoa(double d, int precision)
+char		*ft_dtoa(long double d, int precision)
 {
 	char	*str;
 	char	*ds;

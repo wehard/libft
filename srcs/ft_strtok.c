@@ -6,13 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/24 12:11:17 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/24 12:13:00 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/25 12:23:09 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int is_delim(char c, const char *delims)
+static int	is_delim(char c, const char *delims)
 {
 	int i;
 
@@ -26,10 +26,10 @@ static int is_delim(char c, const char *delims)
 	return (0);
 }
 
-char *ft_strtok(char *src, const char *delims)
+char		*ft_strtok(char *src, const char *delims)
 {
-	static char *ptr;
-	char *token = NULL;
+	static char	*ptr;
+	char		*token;
 
 	if (src)
 	{
@@ -37,8 +37,6 @@ char *ft_strtok(char *src, const char *delims)
 			src++;
 		ptr = src;
 	}
-	if (!ptr)
-		return (NULL);
 	token = ptr;
 	while (*ptr != '\0')
 	{
@@ -47,7 +45,7 @@ char *ft_strtok(char *src, const char *delims)
 			*ptr++ = '\0';
 			while (is_delim(*ptr, delims))
 				ptr++;
-			break;
+			break ;
 		}
 		ptr++;
 	}
