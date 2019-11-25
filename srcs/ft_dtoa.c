@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/22 19:18:09 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/25 11:31:02 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,28 @@
 
 static char	*ft_fractoa(double d, int precision)
 {
-	char	*str;
-	double	nbr;
-	int		i;
-	int		len;
+	char		*str;
+	char		*tmp;
+	char		*zeros;
+	uint64_t	intf;
+	int			numz;
 
 	if (d < 0)
 		d = -d;
-	nbr = d - (int)d;
-	len = 50; // !!!1
-	if (!(str = (char*)malloc(sizeof(char) * len + 1)))
-		return (NULL);
-	ft_bzero(str, len + 1);
-	i = 0;
-	while (precision--)
+	intf = (uint64_t)((d * ft_pow(10, precision)) + 0.5);
+	tmp = ft_itoa_uint64(intf);
+	if (ft_strlen(tmp) < (size_t)precision)
 	{
-		nbr *= 10.0;
-		if (precision == 0)
-			nbr += 0.5;
-		str[i++] = ((uint64_t)nbr % 10) + '0';
+		numz = precision - ft_strlen(tmp);
+		zeros = ft_strnew(numz);
+		ft_bzero(zeros, numz);
+		ft_memset(zeros, '0', numz);
+		str = ft_strjoin(zeros, tmp);
+		free(zeros);
 	}
+	else
+		str = ft_strdup(tmp);
+	free(tmp);
 	return (str);
 }
 
@@ -48,7 +50,7 @@ char		*ft_dtoa(double d, int precision)
 	if (!precision)
 		return (ft_itoa_int64((int64_t)d));
 	ds = ft_itoa_int64((int64_t)d);
-	fs = ft_fractoa(d, precision);
+	fs = ft_fractoa(d - (int64_t)d, precision);
 	t = ft_strjoin(ds, ".");
 	str = ft_strjoin(t, fs);
 	free(t);
