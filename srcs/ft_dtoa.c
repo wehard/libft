@@ -6,12 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/28 00:18:46 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/28 00:41:23 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+
+
 
 static long double	ft_atod(char *str)
 {
@@ -27,7 +29,7 @@ static long double	ft_atod(char *str)
 	return (d);
 }
 
-static int			ft_count_whole(long double d)
+static int			ft_count_dec(long double d)
 {
 	int count;
 
@@ -67,7 +69,7 @@ static char			*ft_dectoa(long double d)
 	int			i;
 	long double	d_tmp;
 
-	count = ft_count_whole(d);
+	count = ft_count_dec(d);
 	if (!(str = (char*)ft_memalloc(count + 1)))
 		return (NULL);
 
@@ -88,15 +90,34 @@ static char			*ft_dectoa(long double d)
 	return (str);
 }
 
+/* static long double	ft_dtoa_round(long double d, int precision)
+{
+	long double	d_tmp;
+	char		*s_dec;
+	//char		*s_frac;
+
+	d = d < 0 ? -d : d;
+	d_tmp = d * ft_pow(10, precision);
+	s_dec = ft_dectoa(d_tmp);
+	//s_frac = ft_fractoa(d_tmp, precision, s_dec);
+	d_tmp -= ft_atod(s_dec);
+	free(s_dec);
+	if (d_tmp > 0.5 || (d_tmp == 0.5 && (s_dec[ft_strlen(s_dec) - 1] - '0') % 2 == 0))
+		d += 0.5 * ft_pow(10, -precision);
+	return (d);
+} */
+
 char				*ft_dtoa(long double d, int precision)
 {
 	char	*str;
 	char	*dec;
 	char	*frac;
 	char	*dot;
+	long double r;
 
-	dec = ft_dectoa(d);
-	frac = ft_fractoa(d, precision, dec);
+	r = d; //ft_dtoa_round(d, precision);
+	dec = ft_dectoa(r);
+	frac = ft_fractoa(r, precision, dec);
 	dot = ft_strjoin(dec, ".");
 	str = ft_strjoin(dot, frac);
 	free(dot);
