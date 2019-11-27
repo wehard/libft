@@ -6,55 +6,101 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/25 13:10:18 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/28 00:18:46 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static char	*ft_fractoa(long double d, int precision)
+static long double	ft_atod(char *str)
+{
+	long double d;
+
+	d = 0;
+	while (*str)
+	{
+		d *= 10;
+		d += (long double)(*str - '0');
+		++str;
+	}
+	return (d);
+}
+
+static int			ft_count_whole(long double d)
+{
+	int count;
+
+	count = 0;
+	while (d > 1)
+	{
+		count++;
+		d /= 10;
+	}
+	return (ft_max(count, 1));
+}
+
+static char			*ft_fractoa(long double d, int precision, char *dec)
+{
+	char	*s;
+	int		i;
+
+	i = 0;
+	d = d < 0 ? -d : d;
+	d -= ft_atod(dec);
+	if (!(s = (char*)ft_memalloc(precision + 1)))
+		return (NULL);
+	while (i < precision)
+	{
+		d *= 10;
+		s[i++] = (d > 0) ? (int)d + '0' : '0';
+		d -= (int)d;
+	}
+	return (s);
+}
+
+static char			*ft_dectoa(long double d)
 {
 	char		*str;
-	char		*tmp;
-	char		*zeros;
-	uint64_t	intf;
-	int			numz;
+	char		*ptr;
+	int			count;
+	int			i;
+	long double	d_tmp;
 
-	if (d < 0)
-		d = -d;
-	intf = (uint64_t)((d * ft_pow(10, precision)) + 0.5);
-	tmp = ft_itoa_uint64(intf);
-	if (ft_strlen(tmp) < (size_t)precision)
+	count = ft_count_whole(d);
+	if (!(str = (char*)ft_memalloc(count + 1)))
+		return (NULL);
+
+	ptr = str;
+	while (count)
 	{
-		numz = precision - ft_strlen(tmp);
-		zeros = ft_strnew(numz);
-		ft_bzero(zeros, numz);
-		ft_memset(zeros, '0', numz);
-		str = ft_strjoin(zeros, tmp);
-		free(zeros);
+		i = count - 1;
+		d_tmp = d;
+		while (i--)
+			d_tmp /= 10;
+		*ptr++ = (int)d_tmp + '0';
+		d_tmp = (int)d_tmp;
+		while (++i < count - 1)
+			d_tmp *= 10;
+		d -= d_tmp;
+		--count;
 	}
-	else
-		str = ft_strdup(tmp);
-	free(tmp);
 	return (str);
 }
 
-char		*ft_dtoa(long double d, int precision)
+char				*ft_dtoa(long double d, int precision)
 {
 	char	*str;
-	char	*ds;
-	char	*fs;
-	char	*t;
+	char	*dec;
+	char	*frac;
+	char	*dot;
 
-	if (!precision)
-		return (ft_itoa_int64((int64_t)d));
-	ds = ft_itoa_int64((int64_t)d);
-	fs = ft_fractoa(d - (int64_t)d, precision);
-	t = ft_strjoin(ds, ".");
-	str = ft_strjoin(t, fs);
-	free(t);
-	free(ds);
-	free(fs);
+	dec = ft_dectoa(d);
+	frac = ft_fractoa(d, precision, dec);
+	dot = ft_strjoin(dec, ".");
+	str = ft_strjoin(dot, frac);
+	free(dot);
+	free(dec);
+	free(frac);
 	return (str);
 }
