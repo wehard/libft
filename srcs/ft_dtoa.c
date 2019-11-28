@@ -6,28 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/28 18:29:04 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/28 20:47:31 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
-
-/* static long double	ft_atod(char *str)
-{
-	long double d;
-
-	d = 0;
-	while (*str)
-	{
-		d *= 10;
-		d += (long double)(*str - '0');
-		++str;
-	}
-	//printf("%Lf", d);
-	return (d);
-} */
+#include <stdio.h> //
 
 static int			ft_count_dec(long double d)
 {
@@ -49,22 +34,23 @@ static char			*ft_fractoa(long double d, int precision, int *pass)
 
 	i = 0;
 	d = d < 0 ? -d : d;
-	d -= (int64_t)d;
+	d -= (long double)(int)d;
 	d = d + (0.5 / ft_pow(10, precision));
 	if (!(str = (char*)ft_memalloc(precision + 1)))
 		return (NULL);
 	if (d >= 1.0)
 	{
 		*pass = 1;
-		d -= (long double)(int64_t)d;
+		d -= (long double)(int)d;
 	}
 	while (i < precision)
 	{
 		d *= 10;
-		if ((int64_t)d > 10)
+		printf("%Lf\n", d);
+		if ((int)d > 10)
 			return (NULL);
-		str[i++] = (int64_t)d + '0';
-		d -= (int64_t)d;
+		str[i++] = (int)d + '0';
+		d -= (long double)(int)d;
 	}
 	return (str);
 }
