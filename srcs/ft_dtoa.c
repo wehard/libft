@@ -6,16 +6,15 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/28 00:41:23 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/28 18:25:10 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include <stdio.h>
 
-
-
-static long double	ft_atod(char *str)
+/* static long double	ft_atod(char *str)
 {
 	long double d;
 
@@ -26,8 +25,9 @@ static long double	ft_atod(char *str)
 		d += (long double)(*str - '0');
 		++str;
 	}
+	//printf("%Lf", d);
 	return (d);
-}
+} */
 
 static int			ft_count_dec(long double d)
 {
@@ -42,23 +42,31 @@ static int			ft_count_dec(long double d)
 	return (ft_max(count, 1));
 }
 
-static char			*ft_fractoa(long double d, int precision, char *dec)
+static char			*ft_fractoa(long double d, int precision, int *pass)
 {
-	char	*s;
+	char	*str;
 	int		i;
 
 	i = 0;
 	d = d < 0 ? -d : d;
-	d -= ft_atod(dec);
-	if (!(s = (char*)ft_memalloc(precision + 1)))
+	d -= (int64_t)d;
+	d = d + (0.5 / ft_pow(10, precision));
+	if (!(str = (char*)ft_memalloc(precision + 1)))
 		return (NULL);
+	if (d >= 1.0)
+	{
+		*pass = 1;
+		d -= (long double)(int64_t)d;
+	}
 	while (i < precision)
 	{
 		d *= 10;
-		s[i++] = (d > 0) ? (int)d + '0' : '0';
-		d -= (int)d;
+		if ((int64_t)d > 10)
+			return (NULL);
+		str[i++] = (int64_t)d + '0';
+		d -= (int64_t)d;
 	}
-	return (s);
+	return (str);
 }
 
 static char			*ft_dectoa(long double d)
@@ -85,27 +93,10 @@ static char			*ft_dectoa(long double d)
 		while (++i < count - 1)
 			d_tmp *= 10;
 		d -= d_tmp;
-		--count;
+		count--;
 	}
 	return (str);
 }
-
-/* static long double	ft_dtoa_round(long double d, int precision)
-{
-	long double	d_tmp;
-	char		*s_dec;
-	//char		*s_frac;
-
-	d = d < 0 ? -d : d;
-	d_tmp = d * ft_pow(10, precision);
-	s_dec = ft_dectoa(d_tmp);
-	//s_frac = ft_fractoa(d_tmp, precision, s_dec);
-	d_tmp -= ft_atod(s_dec);
-	free(s_dec);
-	if (d_tmp > 0.5 || (d_tmp == 0.5 && (s_dec[ft_strlen(s_dec) - 1] - '0') % 2 == 0))
-		d += 0.5 * ft_pow(10, -precision);
-	return (d);
-} */
 
 char				*ft_dtoa(long double d, int precision)
 {
@@ -113,11 +104,22 @@ char				*ft_dtoa(long double d, int precision)
 	char	*dec;
 	char	*frac;
 	char	*dot;
-	long double r;
+	int		pass;
 
-	r = d; //ft_dtoa_round(d, precision);
-	dec = ft_dectoa(r);
-	frac = ft_fractoa(r, precision, dec);
+	pass = 0;
+	if (!precision)
+	{
+		frac = ft_fractoa(d, precision, &pass);
+		if (pass)
+			return (ft_itoa_int64((int64_t)d + 1));
+		else
+			return (ft_itoa_int64((int64_t)d));
+	}
+	frac = ft_fractoa(d, precision, &pass);
+	if (pass)
+		dec = ft_dectoa(d + 1);
+	else
+		dec = ft_dectoa(d);
 	dot = ft_strjoin(dec, ".");
 	str = ft_strjoin(dot, frac);
 	free(dot);
