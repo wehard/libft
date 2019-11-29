@@ -6,13 +6,12 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/28 20:47:31 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/29 14:37:51 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h> //
 
 static int			ft_count_dec(long double d)
 {
@@ -46,7 +45,6 @@ static char			*ft_fractoa(long double d, int precision, int *pass)
 	while (i < precision)
 	{
 		d *= 10;
-		printf("%Lf\n", d);
 		if ((int)d > 10)
 			return (NULL);
 		str[i++] = (int)d + '0';
@@ -66,7 +64,6 @@ static char			*ft_dectoa(long double d)
 	count = ft_count_dec(d);
 	if (!(str = (char*)ft_memalloc(count + 1)))
 		return (NULL);
-
 	ptr = str;
 	while (count)
 	{
@@ -96,10 +93,8 @@ char				*ft_dtoa(long double d, int precision)
 	if (!precision)
 	{
 		frac = ft_fractoa(d, precision, &pass);
-		if (pass)
-			return (ft_itoa_int64((int64_t)d + 1));
-		else
-			return (ft_itoa_int64((int64_t)d));
+		return (pass ?
+			ft_itoa_int64((int64_t)d + 1) : ft_itoa_int64((int64_t)d));
 	}
 	frac = ft_fractoa(d, precision, &pass);
 	if (pass)

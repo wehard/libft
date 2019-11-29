@@ -6,13 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 16:28:24 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/29 16:29:59 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/29 14:15:02 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_pow(int n, unsigned int p)
+long long	ft_pow(long long n, unsigned int p)
 {
-	int res;
+	long long res;
 
 	res = 1;
 	while (p--)
