@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/11/29 14:37:51 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/11/29 15:51:37 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ static char			*ft_fractoa(long double d, int precision, int *pass)
 
 	i = 0;
 	d = d < 0 ? -d : d;
-	d -= (long double)(int)d;
+	d -= (long double)(uint64_t)d;
 	d = d + (0.5 / ft_pow(10, precision));
 	if (!(str = (char*)ft_memalloc(precision + 1)))
 		return (NULL);
 	if (d >= 1.0)
 	{
 		*pass = 1;
-		d -= (long double)(int)d;
+		d -= (long double)(uint64_t)d;
 	}
 	while (i < precision)
 	{
@@ -48,7 +48,7 @@ static char			*ft_fractoa(long double d, int precision, int *pass)
 		if ((int)d > 10)
 			return (NULL);
 		str[i++] = (int)d + '0';
-		d -= (long double)(int)d;
+		d -= (long double)(uint64_t)d;
 	}
 	return (str);
 }
