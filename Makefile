@@ -6,11 +6,27 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/11/29 14:31:42 by wkorande         ###   ########.fr        #
+#    Updated: 2019/12/01 15:21:28 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+BLACK=\033[30m
+RED=\033[0;31m
+BOLDRED=\033[1;31m
+GREEN=\033[0;32m
+BOLDGREEN=\033[1;32m
+YELLOW=\033[0;33m
+BOLDYELLOW=\033[1;33m
+BLUE=\033[0;34m
+BOLDBLUE=\033[1;34m
+PINK=\033[0;35m
+BOLDPINK=\033[1;35m
+CYAN=\033[0;36m
+BOLDCYAN=\033[1;36m
+WHITE=\033[37m
+NORMAL=\033[0m
 
 SRC =	ft_atoi.c\
 		ft_bzero.c\
@@ -81,11 +97,11 @@ SRC =	ft_atoi.c\
 		ft_max.c\
 		ft_get_next_line.c\
 		ft_dtoa.c\
-		ft_ndigits_base_int64.c\
-		ft_itoa_int64.c\
-		ft_ndigits_base_uint64.c\
-		ft_itoa_base_uint64.c\
-		ft_itoa_uint64.c
+		ft_ndigits_base_ll.c\
+		ft_itoa_ll.c\
+		ft_ndigits_base_ull.c\
+		ft_itoa_base_ull.c\
+		ft_itoa_ull.c
 
 SRCDIR = srcs
 
@@ -98,15 +114,21 @@ INCL = includes
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -I $(INCL) -c $(SRCS)
-	ar rc $(NAME) $(OUT)
-	ranlib $(NAME)
+	@printf "$(BOLDYELLOW)%s$(NORMAL)\n" "Making $(NAME)"
+	@gcc -Wall -Wextra -Werror -I $(INCL) -c $(SRCS)
+	@ar rc $(NAME) $(OUT)
+	@ranlib $(NAME)
+	@printf "$(YELLOW)%s$(NORMAL)\n" "done"
 
 clean:
-	rm -f $(OUT)
+	@printf "$(BOLDBLUE)%s$(NORMAL)\n" "Removing $(OUT)"
+	@rm -f $(OUT)
+	@printf "$(BLUE)%s$(NORMAL)\n" "done"
 
 fclean: clean
-	rm -f $(NAME)
+	@printf "$(BOLDBLUE)%s$(NORMAL)\n" "Removing $(NAME)"
+	@rm -f $(NAME)
+	@printf "$(BLUE)%s$(NORMAL)\n" "done"
 
 re: fclean all
 
