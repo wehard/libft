@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/12/01 15:21:28 by wkorande         ###   ########.fr        #
+#    Updated: 2019/12/11 14:16:48 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -101,7 +101,8 @@ SRC =	ft_atoi.c\
 		ft_itoa_ll.c\
 		ft_ndigits_base_ull.c\
 		ft_itoa_base_ull.c\
-		ft_itoa_ull.c
+		ft_itoa_ull.c\
+		ft_abs.c
 
 SRCDIR = srcs
 

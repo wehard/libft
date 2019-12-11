@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/01 15:27:24 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/11 14:16:36 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,6 @@ int					ft_ndigits_base_ull(unsigned long long n, int base);
 char				*ft_itoa_ll(long long n);
 char				*ft_itoa_ull(unsigned long long n);
 char				*ft_itoa_base_ull(unsigned long long n, char *digits);
+int					ft_abs(int i);
 
 #endif
