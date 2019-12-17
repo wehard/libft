@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/11 14:16:36 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/18 00:05:46 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_pair_d
+{
+	double			a;
+	double			b;
+}					t_pair_d;
 
 /*
 ** libc functions
@@ -114,5 +120,7 @@ char				*ft_itoa_ll(long long n);
 char				*ft_itoa_ull(unsigned long long n);
 char				*ft_itoa_base_ull(unsigned long long n, char *digits);
 int					ft_abs(int i);
+t_pair_d 			ft_make_pair_d(double a, double b);
+double				ft_map_range(double v, t_pair_d a, t_pair_d b);
 
 #endif
