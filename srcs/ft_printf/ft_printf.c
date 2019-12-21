@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:48:42 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/01 15:02:14 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/21 11:39:17 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,15 @@ int			ft_output_type(va_list valist, char c, t_flags *flags)
 static int	ft_output_format(char **fstr, t_flags *flags, va_list valist)
 {
 	int bytes;
-	int flags_done;
 
 	if (*(*fstr) == '\0')
 		return (-1);
 	bytes = 0;
-	flags_done = 0;
 	ft_init_flags(flags);
 	while (ft_parse_flags(fstr, flags) ||
 					ft_parse_width(fstr, flags, valist) ||
 					ft_parse_precision(fstr, flags, valist) ||
-					ft_parse_length(fstr, flags))
-		flags_done = 1;
+					ft_parse_length(fstr, flags));
 	if (*(*fstr) == '\0')
 		return (-1);
 	bytes += ft_output_type(valist, *(*fstr), flags);
