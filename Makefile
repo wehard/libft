@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2019/12/20 15:22:38 by wkorande         ###   ########.fr        #
+#    Updated: 2019/12/30 23:23:09 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,6 +107,7 @@ SRC =	ft_atoi.c\
 		ft_make_pair_d.c
 
 PF_SRC = ft_printf.c\
+		ft_pbuf.c\
 		ft_handle_str.c\
 		ft_handle_nbr.c\
 		ft_handle_other.c\

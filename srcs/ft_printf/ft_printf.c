@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:48:42 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/21 11:39:17 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/30 23:16:04 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_sp_type	g_output_types[N_HANDLERS] =
 	{'f', ft_handle_f}
 };
 
-int			ft_output_type(va_list valist, char c, t_flags *flags)
+int			ft_output_type(va_list valist, char c, t_env *env)
 {
 	int i;
 	int bytes;
@@ -37,49 +37,87 @@ int			ft_output_type(va_list valist, char c, t_flags *flags)
 	while (i < N_HANDLERS)
 	{
 		if (g_output_types[i].c == c)
-			bytes = g_output_types[i].output_func(flags, valist);
+			bytes = g_output_types[i].output_func(env, valist);
 		i++;
 	}
 	return (bytes);
 }
 
-static int	ft_output_format(char **fstr, t_flags *flags, va_list valist)
+static int	ft_output_format(char **fstr, t_env *env, va_list valist)
 {
 	int bytes;
 
 	if (*(*fstr) == '\0')
 		return (-1);
 	bytes = 0;
-	ft_init_flags(flags);
-	while (ft_parse_flags(fstr, flags) ||
-					ft_parse_width(fstr, flags, valist) ||
-					ft_parse_precision(fstr, flags, valist) ||
-					ft_parse_length(fstr, flags));
+	ft_init_env(env);
+	while (ft_parse_flags(fstr, env) ||
+					ft_parse_width(fstr, env, valist) ||
+					ft_parse_precision(fstr, env, valist) ||
+					ft_parse_length(fstr, env));
 	if (*(*fstr) == '\0')
 		return (-1);
-	bytes += ft_output_type(valist, *(*fstr), flags);
+	bytes += ft_output_type(valist, *(*fstr), env);
 	if (*(*fstr) == '%')
-		bytes += ft_handle_percent(flags);
+		bytes += ft_handle_percent(env);
 	(*fstr)++;
 	return (bytes);
 }
 
-static int	ft_output_nonformat(char **fstr)
+static int	ft_output_nonformat(t_env *env, char **fstr)
 {
 	int bytes;
 
 	bytes = 0;
 	while (*(*fstr) && *(*fstr) != '%')
 	{
-		bytes += ft_outchar(*fstr, 1);
+		bytes += ft_outchar(env, *fstr, 1);
 		(*fstr)++;
 	}
 	return (bytes);
 }
 
+int			ft_vsprintf(char *str, const char *format, va_list valist)
+{
+	t_env		*env;
+	char		*fstr;
+	size_t		bytes;
+
+	if (!(env = ft_create_env()))
+		return (-1);
+	if (!(env->p_buf = ft_create_p_buf(str)))
+		return (-1);
+	fstr = (char*)format;
+	while (*fstr)
+	{
+		if (*fstr == '%')
+		{
+			fstr++;
+			ft_output_format(&fstr, env, valist);
+		}
+		else
+			ft_output_nonformat(env, &fstr);
+	}
+	bytes = env->p_buf->at - env->p_buf->start;
+	free(env->p_buf);
+	free(env);
+	return (bytes);
+}
+
+int			ft_sprintf(char *str, const char *format, ...)
+{
+	va_list	valist;
+	int		bytes;
+
+	va_start(valist, format);
+	bytes = ft_vsprintf(str, format, valist);
+	va_end(valist);
+	return (bytes);
+}
+
 int			ft_printf(const char *format, ...)
 {
-	t_flags		*flags;
+	t_env		*env;
 	char		*fstr;
 	size_t		bytes;
 	va_list		valist;
@@ -88,7 +126,7 @@ int			ft_printf(const char *format, ...)
 		return (-1);
 	if (*format == '\0')
 		return (0);
-	if (!(flags = ft_create_flags()))
+	if (!(env = ft_create_env()))
 		return (-1);
 	bytes = 0;
 	fstr = (char*)format;
@@ -96,11 +134,11 @@ int			ft_printf(const char *format, ...)
 	while (*fstr)
 	{
 		if (*fstr == '%' && (fstr++))
-			bytes += ft_output_format(&fstr, flags, valist);
+			bytes += ft_output_format(&fstr, env, valist);
 		else
-			bytes += ft_output_nonformat(&fstr);
+			bytes += ft_output_nonformat(env, &fstr);
 	}
 	va_end(valist);
-	free(flags);
+	free(env);
 	return (bytes);
 }

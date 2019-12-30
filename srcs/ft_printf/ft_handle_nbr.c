@@ -6,106 +6,106 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 10:41:22 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/03 19:16:47 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/30 23:11:03 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_handle_di(t_flags *flags, va_list valist)
+int	ft_handle_di(t_env *env, va_list valist)
 {
 	char		*str;
 	long long	n;
 	int			bytes;
 
-	n = ft_cast_signed(flags->length, valist);
+	n = ft_cast_signed(env->length, valist);
 	if (n < 0)
-		ft_set_prefix(flags, "-", 1);
+		ft_set_prefix(env, "-", 1);
 	else
 	{
-		if (flags->plus)
-			ft_set_prefix(flags, "+", 1);
-		if (!flags->plus && flags->space)
-			ft_set_prefix(flags, " ", 1);
+		if (env->plus)
+			ft_set_prefix(env, "+", 1);
+		if (!env->plus && env->space)
+			ft_set_prefix(env, " ", 1);
 	}
-	if (flags->precision_specified)
-		flags->zero_specified = 0;
-	if (flags->precision_specified && flags->precision == 0)
+	if (env->precision_specified)
+		env->zero_specified = 0;
+	if (env->precision_specified && env->precision == 0)
 		str = ft_strdup("");
 	else
 		str = ft_itoa_ull(n < 0 ? (long long)(n * -1) : (long long)n);
-	bytes = ft_format_zp(flags, str, ft_strlen(str));
+	bytes = ft_format_zp(env, str, ft_strlen(str));
 	free(str);
 	return (bytes);
 }
 
-int	ft_handle_o(t_flags *flags, va_list valist)
+int	ft_handle_o(t_env *env, va_list valist)
 {
 	char				*str;
 	unsigned long long	n;
 	int					bytes;
 
-	n = ft_cast_unsigned(flags->length, valist);
-	if (flags->precision_specified)
+	n = ft_cast_unsigned(env->length, valist);
+	if (env->precision_specified)
 	{
-		flags->zero_specified = 0;
-		flags->precision -= (n != 0) ? flags->hash : 0;
+		env->zero_specified = 0;
+		env->precision -= (n != 0) ? env->hash : 0;
 	}
-	if (flags->hash && n != 0)
-		ft_set_prefix(flags, ZERO, 1);
-	if (flags->precision_specified && flags->precision == 0 && !flags->hash)
+	if (env->hash && n != 0)
+		ft_set_prefix(env, ZERO, 1);
+	if (env->precision_specified && env->precision == 0 && !env->hash)
 		str = ft_strdup("");
 	else
 		str = ft_itoa_base_ull(n, BASE8);
-	bytes = ft_format_zp(flags, str, ft_strlen(str));
+	bytes = ft_format_zp(env, str, ft_strlen(str));
 	free(str);
 	return (bytes);
 }
 
-int	ft_handle_u(t_flags *flags, va_list valist)
+int	ft_handle_u(t_env *env, va_list valist)
 {
 	char				*str;
 	unsigned long long	n;
 	int					bytes;
 
-	n = ft_cast_unsigned(flags->length, valist);
-	if (flags->precision_specified)
-		flags->zero_specified = 0;
-	if (flags->precision_specified && flags->precision == 0)
+	n = ft_cast_unsigned(env->length, valist);
+	if (env->precision_specified)
+		env->zero_specified = 0;
+	if (env->precision_specified && env->precision == 0)
 		str = ft_strdup("");
 	else
 		str = ft_itoa_ull(n);
-	bytes = ft_format_zp(flags, str, ft_strlen(str));
+	bytes = ft_format_zp(env, str, ft_strlen(str));
 	free(str);
 	return (bytes);
 }
 
-int	ft_handle_f(t_flags *flags, va_list valist)
+int	ft_handle_f(t_env *env, va_list valist)
 {
 	char		*str;
 	long double	d;
 	int			bytes;
 
-	if (!flags->precision_specified)
-		flags->precision = 6;
-	d = ft_cast_double(flags->length, valist);
+	if (!env->precision_specified)
+		env->precision = 6;
+	d = ft_cast_double(env->length, valist);
 	if (d < 0)
-		ft_set_prefix(flags, "-", 1);
+		ft_set_prefix(env, "-", 1);
 	else
 	{
-		if (flags->plus)
-			ft_set_prefix(flags, "+", 1);
-		if (!flags->plus && flags->space)
-			ft_set_prefix(flags, " ", 1);
+		if (env->plus)
+			ft_set_prefix(env, "+", 1);
+		if (!env->plus && env->space)
+			ft_set_prefix(env, " ", 1);
 	}
-	if (flags->minus)
-		flags->zero_specified = 0;
-	if (flags->hash && flags->precision_specified && flags->precision == 0)
-		str = ft_strjoin(ft_dtoa((d < 0 ? -d : d), flags->precision), ".");
+	if (env->minus)
+		env->zero_specified = 0;
+	if (env->hash && env->precision_specified && env->precision == 0)
+		str = ft_strjoin(ft_dtoa((d < 0 ? -d : d), env->precision), ".");
 	else
-		str = ft_dtoa((d < 0 ? -d : d), flags->precision);
-	bytes = ft_format_zp(flags, str, ft_strlen(str));
+		str = ft_dtoa((d < 0 ? -d : d), env->precision);
+	bytes = ft_format_zp(env, str, ft_strlen(str));
 	free(str);
 	return (bytes);
 }

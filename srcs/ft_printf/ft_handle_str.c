@@ -6,22 +6,22 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 10:25:24 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/01 15:04:04 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/30 23:09:51 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_handle_c(t_flags *flags, va_list valist)
+int	ft_handle_c(t_env *env, va_list valist)
 {
 	char c;
 
 	c = va_arg(valist, int);
-	return (ft_format(flags, &c, 1));
+	return (ft_format(env, &c, 1));
 }
 
-int	ft_handle_s(t_flags *flags, va_list valist)
+int	ft_handle_s(t_env *env, va_list valist)
 {
 	char	*s;
 	int		len;
@@ -29,9 +29,9 @@ int	ft_handle_s(t_flags *flags, va_list valist)
 	s = va_arg(valist, char *);
 	if (!s)
 		s = NULL_STRING;
-	if (flags->precision_specified)
-		len = ft_min(ft_strlen(s), flags->precision);
+	if (env->precision_specified)
+		len = ft_min(ft_strlen(s), env->precision);
 	else
 		len = ft_strlen(s);
-	return (ft_format(flags, s, len));
+	return (ft_format(env, s, len));
 }

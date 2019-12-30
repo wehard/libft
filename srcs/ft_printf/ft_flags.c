@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_env.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,41 +12,41 @@
 
 #include "ft_printf.h"
 
-t_flags	*ft_create_flags(void)
+t_env	*ft_create_env(void)
 {
-	t_flags *flags;
+	t_env *env;
 
-	if (!(flags = (t_flags*)malloc(sizeof(t_flags))))
+	if (!(env = (t_env*)malloc(sizeof(t_env))))
 		return (NULL);
-	ft_init_flags(flags);
-	return (flags);
+	ft_init_env(env);
+	return (env);
 }
 
-void	ft_init_flags(t_flags *flags)
+void	ft_init_env(t_env *env)
 {
-	if (!flags)
+	if (!env)
 		return ;
-	flags->hash = 0;
-	flags->zero_specified = 0;
-	flags->zero = 0;
-	flags->minus = 0;
-	flags->plus = 0;
-	flags->space = 0;
-	flags->width_specified = 0;
-	flags->width = 0;
-	flags->width_left = 0;
-	flags->precision_specified = 0;
-	flags->precision = 0;
-	flags->precision_left = 0;
-	flags->prefix_specified = 0;
-	flags->prefix = NULL;
-	flags->prefixlen = 0;
-	flags->length = LEN_NONE;
+	env->hash = 0;
+	env->zero_specified = 0;
+	env->zero = 0;
+	env->minus = 0;
+	env->plus = 0;
+	env->space = 0;
+	env->width_specified = 0;
+	env->width = 0;
+	env->width_left = 0;
+	env->precision_specified = 0;
+	env->precision = 0;
+	env->precision_left = 0;
+	env->prefix_specified = 0;
+	env->prefix = NULL;
+	env->prefixlen = 0;
+	env->length = LEN_NONE;
 }
 
-void	ft_set_prefix(t_flags *flags, char *prefix, int len)
+void	ft_set_prefix(t_env *env, char *prefix, int len)
 {
-	flags->prefix = prefix;
-	flags->prefixlen = len;
-	flags->prefix_specified = 1;
+	env->prefix = prefix;
+	env->prefixlen = len;
+	env->prefix_specified = 1;
 }
