@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/27 18:38:16 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:35:09 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/30 23:40:20 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ typedef struct		s_sp_type
 
 int					ft_printf(const char *format, ...);
 int					ft_sprintf(char *str, const char *format, ...);
+int					ft_vsprintf(char *str, const char *format, va_list valist);
 t_env				*ft_create_env(void);
 void				ft_init_env(t_env *env);
 t_p_buf				*ft_create_p_buf(char *dest);
