@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/27 18:38:16 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:40:20 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:57:49 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ typedef struct		s_p_buf
 	size_t			size;
 }					t_p_buf;
 
-typedef struct		s_env
+typedef struct		s_pf_env
 {
 	t_p_buf			*p_buf;
 	int				hash;
@@ -59,9 +59,9 @@ typedef struct		s_env
 	int				prefix_specified;
 	char			*prefix;
 	int				prefixlen;
-}					t_env;
+}					t_pf_env;
 
-typedef int			(*t_s_func)(t_env *, va_list);
+typedef int			(*t_s_func)(t_pf_env *, va_list);
 
 typedef struct		s_sp_type
 {
@@ -72,29 +72,29 @@ typedef struct		s_sp_type
 int					ft_printf(const char *format, ...);
 int					ft_sprintf(char *str, const char *format, ...);
 int					ft_vsprintf(char *str, const char *format, va_list valist);
-t_env				*ft_create_env(void);
-void				ft_init_env(t_env *env);
+t_pf_env			*ft_create_env(void);
+void				ft_init_env(t_pf_env *env);
 t_p_buf				*ft_create_p_buf(char *dest);
 int					ft_resize_p_buf(t_p_buf *pbuf);
-void				ft_set_prefix(t_env *env, char *prefix, int len);
-int					ft_parse_flags(char **fstr, t_env *env);
-int					ft_parse_width(char **fstr, t_env *env, va_list valist);
-int					ft_parse_precision(char **fstr, t_env *env,
+void				ft_set_prefix(t_pf_env *env, char *prefix, int len);
+int					ft_parse_flags(char **fstr, t_pf_env *env);
+int					ft_parse_width(char **fstr, t_pf_env *env, va_list valist);
+int					ft_parse_precision(char **fstr, t_pf_env *env,
 										va_list valist);
-int					ft_parse_length(char **fstr, t_env *env);
-int					ft_format(t_env *env, char *data, int len);
-int					ft_format_zp(t_env *env, char *data, int len);
-int					ft_outchar(t_env *env, const char *data, unsigned int len);
-int					ft_handle_c(t_env *env, va_list valist);
-int					ft_handle_s(t_env *env, va_list valist);
-int					ft_handle_di(t_env *env, va_list valist);
-int					ft_handle_o(t_env *env, va_list valist);
-int					ft_handle_u(t_env *env, va_list valist);
-int					ft_handle_f(t_env *env, va_list valist);
-int					ft_handle_p(t_env *env, va_list valist);
-int					ft_handle_x_low(t_env *env, va_list valist);
-int					ft_handle_x_up(t_env *env, va_list valist);
-int					ft_handle_percent(t_env *env);
+int					ft_parse_length(char **fstr, t_pf_env *env);
+int					ft_format(t_pf_env *env, char *data, int len);
+int					ft_format_zp(t_pf_env *env, char *data, int len);
+int					ft_outchar(t_pf_env *env, const char *data, unsigned int len);
+int					ft_handle_c(t_pf_env *env, va_list valist);
+int					ft_handle_s(t_pf_env *env, va_list valist);
+int					ft_handle_di(t_pf_env *env, va_list valist);
+int					ft_handle_o(t_pf_env *env, va_list valist);
+int					ft_handle_u(t_pf_env *env, va_list valist);
+int					ft_handle_f(t_pf_env *env, va_list valist);
+int					ft_handle_p(t_pf_env *env, va_list valist);
+int					ft_handle_x_low(t_pf_env *env, va_list valist);
+int					ft_handle_x_up(t_pf_env *env, va_list valist);
+int					ft_handle_percent(t_pf_env *env);
 long long			ft_cast_signed(int length, va_list valist);
 unsigned long long	ft_cast_unsigned(int length, va_list valist);
 long double			ft_cast_double(int length, va_list valist);

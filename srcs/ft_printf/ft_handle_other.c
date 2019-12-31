@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 11:42:28 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:11:15 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:51:44 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_handle_p(t_env *env, va_list valist)
+int	ft_handle_p(t_pf_env *env, va_list valist)
 {
 	char				*str;
 	unsigned long long	p;
@@ -32,7 +32,7 @@ int	ft_handle_p(t_env *env, va_list valist)
 	return (bytes);
 }
 
-int	ft_handle_x_low(t_env *env, va_list valist)
+int	ft_handle_x_low(t_pf_env *env, va_list valist)
 {
 	char				*str;
 	unsigned long long	n;
@@ -52,7 +52,7 @@ int	ft_handle_x_low(t_env *env, va_list valist)
 	return (bytes);
 }
 
-int	ft_handle_x_up(t_env *env, va_list valist)
+int	ft_handle_x_up(t_pf_env *env, va_list valist)
 {
 	char				*str;
 	unsigned long long	n;
@@ -72,7 +72,7 @@ int	ft_handle_x_up(t_env *env, va_list valist)
 	return (bytes);
 }
 
-int	ft_handle_percent(t_env *env)
+int	ft_handle_percent(t_pf_env *env)
 {
 	int bytes;
 

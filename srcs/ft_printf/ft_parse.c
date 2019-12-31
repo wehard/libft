@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 14:48:44 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:10:50 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:50:53 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int		ft_parse_flags(char **fstr, t_env *env)
+int		ft_parse_flags(char **fstr, t_pf_env *env)
 {
 	if (*(*fstr) == '#')
 		env->hash = 1;
@@ -34,7 +34,7 @@ int		ft_parse_flags(char **fstr, t_env *env)
 	return (1);
 }
 
-int		ft_parse_width(char **fstr, t_env *env, va_list valist)
+int		ft_parse_width(char **fstr, t_pf_env *env, va_list valist)
 {
 	int w;
 
@@ -60,7 +60,7 @@ int		ft_parse_width(char **fstr, t_env *env, va_list valist)
 	return (0);
 }
 
-int		ft_parse_precision(char **fstr, t_env *env, va_list valist)
+int		ft_parse_precision(char **fstr, t_pf_env *env, va_list valist)
 {
 	if (*(*fstr) == '.')
 	{
@@ -85,7 +85,7 @@ int		ft_parse_precision(char **fstr, t_env *env, va_list valist)
 	return (0);
 }
 
-int		ft_parse_length(char **fstr, t_env *env)
+int		ft_parse_length(char **fstr, t_pf_env *env)
 {
 	if (*(*fstr) == 'h')
 	{

@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:48:42 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/31 11:37:07 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:58:44 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_sp_type	g_output_types[N_HANDLERS] =
 	{'f', ft_handle_f}
 };
 
-int			ft_output_type(va_list valist, char c, t_env *env)
+int			ft_output_type(va_list valist, char c, t_pf_env *env)
 {
 	int i;
 	int bytes;
@@ -43,7 +43,7 @@ int			ft_output_type(va_list valist, char c, t_env *env)
 	return (bytes);
 }
 
-static int	ft_output_format(char **fstr, t_env *env, va_list valist)
+static int	ft_output_format(char **fstr, t_pf_env *env, va_list valist)
 {
 	int bytes;
 
@@ -63,7 +63,7 @@ static int	ft_output_format(char **fstr, t_env *env, va_list valist)
 	return (bytes);
 }
 
-static int	ft_output_nonformat(t_env *env, char **fstr)
+static int	ft_output_nonformat(t_pf_env *env, char **fstr)
 {
 	int bytes;
 
@@ -78,7 +78,7 @@ static int	ft_output_nonformat(t_env *env, char **fstr)
 
 int			ft_vsprintf(char *str, const char *format, va_list valist)
 {
-	t_env		*env;
+	t_pf_env	*env;
 	char		*fstr;
 	size_t		bytes;
 
@@ -105,7 +105,7 @@ int			ft_vsprintf(char *str, const char *format, va_list valist)
 
 int			ft_printf(const char *format, ...)
 {
-	t_env		*env;
+	t_pf_env	*env;
 	char		*fstr;
 	size_t		bytes;
 	va_list		valist;

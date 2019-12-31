@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 10:41:22 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:11:03 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:51:53 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_handle_di(t_env *env, va_list valist)
+int	ft_handle_di(t_pf_env *env, va_list valist)
 {
 	char		*str;
 	long long	n;
@@ -40,7 +40,7 @@ int	ft_handle_di(t_env *env, va_list valist)
 	return (bytes);
 }
 
-int	ft_handle_o(t_env *env, va_list valist)
+int	ft_handle_o(t_pf_env *env, va_list valist)
 {
 	char				*str;
 	unsigned long long	n;
@@ -63,7 +63,7 @@ int	ft_handle_o(t_env *env, va_list valist)
 	return (bytes);
 }
 
-int	ft_handle_u(t_env *env, va_list valist)
+int	ft_handle_u(t_pf_env *env, va_list valist)
 {
 	char				*str;
 	unsigned long long	n;
@@ -81,7 +81,7 @@ int	ft_handle_u(t_env *env, va_list valist)
 	return (bytes);
 }
 
-int	ft_handle_f(t_env *env, va_list valist)
+int	ft_handle_f(t_pf_env *env, va_list valist)
 {
 	char		*str;
 	long double	d;

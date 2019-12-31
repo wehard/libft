@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 14:17:39 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:22:28 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:51:06 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "ft_printf.h"
 
-int			ft_format(t_env *env, char *data, int len)
+int			ft_format(t_pf_env *env, char *data, int len)
 {
 	int bytes;
 	int padding;
@@ -39,7 +39,7 @@ int			ft_format(t_env *env, char *data, int len)
 	return (bytes);
 }
 
-static int	ft_format_zp_left(t_env *env, char *data, int len)
+static int	ft_format_zp_left(t_pf_env *env, char *data, int len)
 {
 	int bytes;
 
@@ -54,7 +54,7 @@ static int	ft_format_zp_left(t_env *env, char *data, int len)
 	return (bytes);
 }
 
-static int	ft_format_zp_right(t_env *env, char *data, int len)
+static int	ft_format_zp_right(t_pf_env *env, char *data, int len)
 {
 	int bytes;
 
@@ -71,7 +71,7 @@ static int	ft_format_zp_right(t_env *env, char *data, int len)
 	return (bytes);
 }
 
-int			ft_format_zp(t_env *env, char *data, int len)
+int			ft_format_zp(t_pf_env *env, char *data, int len)
 {
 	int bytes;
 
@@ -96,7 +96,7 @@ int			ft_format_zp(t_env *env, char *data, int len)
 	return (bytes);
 }
 
-int			ft_outchar(t_env *env, const char *data, unsigned int len)
+int			ft_outchar(t_pf_env *env, const char *data, unsigned int len)
 {
 	if (env && env->p_buf && env->p_buf->at)
 	{

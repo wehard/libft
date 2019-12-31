@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 10:25:24 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:09:51 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:51:26 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_handle_c(t_env *env, va_list valist)
+int	ft_handle_c(t_pf_env *env, va_list valist)
 {
 	char c;
 
@@ -21,7 +21,7 @@ int	ft_handle_c(t_env *env, va_list valist)
 	return (ft_format(env, &c, 1));
 }
 
-int	ft_handle_s(t_env *env, va_list valist)
+int	ft_handle_s(t_pf_env *env, va_list valist)
 {
 	char	*s;
 	int		len;
