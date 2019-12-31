@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:48:42 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/30 23:16:04 by wkorande         ###   ########.fr       */
+/*   Updated: 2019/12/31 11:37:07 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,9 @@ static int	ft_output_format(char **fstr, t_env *env, va_list valist)
 		return (-1);
 	bytes = 0;
 	ft_init_env(env);
-	while (ft_parse_flags(fstr, env) ||
-					ft_parse_width(fstr, env, valist) ||
-					ft_parse_precision(fstr, env, valist) ||
-					ft_parse_length(fstr, env));
+	while (ft_parse_flags(fstr, env) || ft_parse_width(fstr, env, valist) ||
+		ft_parse_precision(fstr, env, valist) || ft_parse_length(fstr, env))
+		bytes = 0;
 	if (*(*fstr) == '\0')
 		return (-1);
 	bytes += ft_output_type(valist, *(*fstr), env);
@@ -101,17 +100,6 @@ int			ft_vsprintf(char *str, const char *format, va_list valist)
 	bytes = env->p_buf->at - env->p_buf->start;
 	free(env->p_buf);
 	free(env);
-	return (bytes);
-}
-
-int			ft_sprintf(char *str, const char *format, ...)
-{
-	va_list	valist;
-	int		bytes;
-
-	va_start(valist, format);
-	bytes = ft_vsprintf(str, format, valist);
-	va_end(valist);
 	return (bytes);
 }
 
