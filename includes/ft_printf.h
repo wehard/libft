@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/27 18:38:16 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/31 11:57:49 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/03 13:42:05 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,8 @@ int					ft_parse_precision(char **fstr, t_pf_env *env,
 int					ft_parse_length(char **fstr, t_pf_env *env);
 int					ft_format(t_pf_env *env, char *data, int len);
 int					ft_format_zp(t_pf_env *env, char *data, int len);
-int					ft_outchar(t_pf_env *env, const char *data, unsigned int len);
+int					ft_outchar(t_pf_env *env, const char *data,
+										unsigned int len);
 int					ft_handle_c(t_pf_env *env, va_list valist);
 int					ft_handle_s(t_pf_env *env, va_list valist);
 int					ft_handle_di(t_pf_env *env, va_list valist);
