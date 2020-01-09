@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:48:42 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/31 11:58:44 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/09 18:23:39 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ int			ft_printf(const char *format, ...)
 		return (0);
 	if (!(env = ft_create_env()))
 		return (-1);
+	env->p_buf = NULL;
 	bytes = 0;
 	fstr = (char*)format;
 	va_start(valist, format);
