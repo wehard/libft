@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/12 13:01:37 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/12 13:34:59 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,6 @@ t_pair_d			ft_make_pair_d(double a, double b);
 double				ft_map_range(double v, t_pair_d a, t_pair_d b);
 double				ft_abs_d(double d);
 char				*ft_strtok(char *src, const char *delims);
+int					ft_ndigits_d(long double d);
 
 #endif
