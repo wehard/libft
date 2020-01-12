@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 15:28:06 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/12 16:15:40 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/12 16:18:17 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ double	ft_strtod(char *s)
 	int digits;
 	int decimals;
 
+	negative = 0;
 	if (*s == '-' || *s == '+')
 	{
 		if (*s == '-')
@@ -45,7 +46,7 @@ double	ft_strtod(char *s)
 			decimals++;
 		}
 	}
-	while (decimals)
+	while (decimals--)
 	{
 		nbr /= 10.0;
 	}
