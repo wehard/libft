@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 13:16:46 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/11 13:17:30 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/12 13:15:40 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	is_delim(char c, const char *delims)
 	return (0);
 }
 
-static int	advance_ptr(char *ptr, char *delims)
+static int	advance_ptr(char *ptr, const char *delims)
 {
 	int i;
 

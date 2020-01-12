@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/11 11:38:19 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/12 13:14:51 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,7 +105,8 @@ SRC =	ft_atoi.c\
 		ft_abs.c\
 		ft_map_range.c\
 		ft_make_pair_d.c\
-		ft_abs_d.c
+		ft_abs_d.c\
+		ft_strtok.c
 
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\
