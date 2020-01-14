@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/12 19:23:01 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/14 19:02:28 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,5 +129,6 @@ double				ft_strtod(char *str);
 
 void				ft_swap_f(float *f1, float *f2);
 void				ft_swap_d(double *d1, double *d2);
+double				ft_abs_d(double d);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/12 19:23:28 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/14 19:02:14 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,8 @@ SRC =	ft_atoi.c\
 		ft_ndigits_d.c\
 		ft_strtod.c\
 		ft_swap_f.c\
-		ft_swap_d.c
+		ft_swap_d.c\
+		ft_abs_d.c
 
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\
