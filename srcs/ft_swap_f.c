@@ -6,11 +6,11 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 19:21:51 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/12 19:22:05 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/14 19:03:15 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap_f(float *f1, float *f2)
+void	ft_swap_f(float *f1, float *f2)
 {
 	float t;
 
