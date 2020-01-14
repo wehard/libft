@@ -6,11 +6,11 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 23:05:00 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/14 19:01:59 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/14 19:10:52 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-double	ft_max(double a, double b)
+double	ft_max_d(double a, double b)
 {
 	if (a > b)
 		return (a);
