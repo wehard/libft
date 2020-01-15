@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/14 19:06:06 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/15 16:36:42 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,5 +130,7 @@ double				ft_strtod(char *str);
 void				ft_swap_f(float *f1, float *f2);
 void				ft_swap_d(double *d1, double *d2);
 double				ft_max_d(double a, double b);
+float				ft_lerp_f(float n1, float n2, float t);
+float				ft_inv_lerp_f(float value, float a, float b);
 
 #endif
