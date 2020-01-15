@@ -6,25 +6,12 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 10:36:01 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/01 15:14:52 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/15 11:34:30 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
-static int			ft_count_dec(long double d)
-{
-	int count;
-
-	count = 0;
-	while (d > 1)
-	{
-		count++;
-		d /= 10;
-	}
-	return (ft_max(count, 1));
-}
 
 static char			*ft_fractoa(long double d, int precision, int *pass)
 {
@@ -61,7 +48,7 @@ static char			*ft_dectoa(long double d)
 	int			i;
 	long double	d_tmp;
 
-	count = ft_count_dec(d);
+	count = ft_ndigits_base_ll(d, 10);
 	if (!(str = (char*)ft_memalloc(count + 1)))
 		return (NULL);
 	ptr = str;
