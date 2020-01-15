@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 12:22:51 by wkorande          #+#    #+#             */
-/*   Updated: 2019/12/01 15:18:49 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/15 11:37:20 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	ft_ndigits_base_ll(long long n, int base)
 		n /= base;
 		i++;
 	}
-	return (i);
+	return (ft_max(1, i));
 }
