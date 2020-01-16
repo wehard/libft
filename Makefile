@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/16 12:00:47 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/16 14:12:36 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,13 +128,27 @@ PF_SRC = ft_printf.c\
 		ft_cast_helper.c\
 		ft_flags.c
 
+VEC3_SRC = ft_add_vec3.c\
+		ft_div_vec3.c\
+		ft_dot_vec3.c\
+		ft_invert_vec3.c\
+		ft_len_vec3.c\
+		ft_make_vec3.c\
+		ft_mul_vec3.c\
+		ft_mul_vec3_vec3.c\
+		ft_normalize_vec3.c\
+		ft_reflect_vec3.c\
+		ft_set_vec3.c\
+		ft_sub_vec3.c
+
 SRCDIR = srcs
 
 PF_SRCDIR = $(SRCDIR)/ft_printf
+VEC3_SRCDIR = $(SRCDIR)/vector
 
-SRCS = $(addprefix $(SRCDIR)/, $(SRC)) $(addprefix $(PF_SRCDIR)/, $(PF_SRC))
+SRCS = $(addprefix $(SRCDIR)/, $(SRC)) $(addprefix $(PF_SRCDIR)/, $(PF_SRC)) $(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))
 
-OUT = $(SRC:.c=.o) $(PF_SRC:.c=.o)
+OUT = $(SRC:.c=.o) $(PF_SRC:.c=.o) $(VEC3_SRC:.c=.o)
 
 INCL = includes
 
