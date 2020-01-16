@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/15 16:36:54 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/16 12:00:47 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,7 +113,9 @@ SRC =	ft_atoi.c\
 		ft_swap_d.c\
 		ft_max_d.c\
 		ft_lerp_f.c\
-		ft_inv_lerp_f.c
+		ft_inv_lerp_f.c\
+		ft_lerp_d.c\
+		ft_inv_lerp_d.c
 
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\
