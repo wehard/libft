@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 15:28:06 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/14 19:03:43 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/16 18:12:41 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,13 @@ double	ft_strtod(char *s)
 	if (*s == '.')
 	{
 		s++;
-		while (ft_isdigit(*s))
+		while (ft_isdigit(*s) && (digits += 1) && (decimals += 1))
 		{
 			nbr = nbr * 10.0 + (*s - '0');
 			s++;
-			digits++;
-			decimals++;
 		}
 	}
 	while (decimals--)
-	{
 		nbr /= 10.0;
-	}
 	return (negative ? -nbr : nbr);
 }
