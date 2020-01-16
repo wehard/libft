@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/16 14:12:36 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/16 15:04:08 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,37 @@ BOLDCYAN=\033[1;36m
 WHITE=\033[37m
 NORMAL=\033[0m
 
-SRC =	ft_atoi.c\
+SRC = ft_abs.c\
+		ft_abs_d.c\
+		ft_dtoa.c\
+		ft_get_next_line.c\
+		ft_inv_lerp_d.c\
+		ft_inv_lerp_f.c\
+		ft_itoa_base.c\
+		ft_itoa_base_ull.c\
+		ft_itoa_ll.c\
+		ft_itoa_ull.c\
+		ft_lerp_d.c\
+		ft_lerp_f.c\
+		ft_make_pair_d.c\
+		ft_map_range.c\
+		ft_max.c\
+		ft_max_d.c\
+		ft_min.c\
+		ft_ndigits.c\
+		ft_ndigits_base.c\
+		ft_ndigits_base_ll.c\
+		ft_ndigits_base_ull.c\
+		ft_ndigits_d.c\
+		ft_nwords.c\
+		ft_pow.c\
+		ft_strrev.c\
+		ft_strtod.c\
+		ft_strtok.c\
+		ft_swap_d.c\
+		ft_swap_f.c
+
+LIBC_SRC = ft_atoi.c\
 		ft_bzero.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
@@ -36,7 +66,6 @@ SRC =	ft_atoi.c\
 		ft_isdigit.c\
 		ft_isprint.c\
 		ft_itoa.c\
-		ft_itoa_base.c\
 		ft_memalloc.c\
 		ft_memccpy.c\
 		ft_memchr.c\
@@ -45,9 +74,6 @@ SRC =	ft_atoi.c\
 		ft_memdel.c\
 		ft_memmove.c\
 		ft_memset.c\
-		ft_ndigits.c\
-		ft_ndigits_base.c\
-		ft_nwords.c\
 		ft_putchar.c\
 		ft_putchar_fd.c\
 		ft_putendl.c\
@@ -78,44 +104,20 @@ SRC =	ft_atoi.c\
 		ft_strnew.c\
 		ft_strnstr.c\
 		ft_strrchr.c\
-		ft_strrev.c\
 		ft_strsplit.c\
 		ft_strstr.c\
 		ft_strsub.c\
 		ft_strtrim.c\
 		ft_tolower.c\
-		ft_toupper.c\
-		ft_lstnew.c\
-		ft_lstdelone.c\
-		ft_lstdel.c\
-		ft_lstadd.c\
+		ft_toupper.c
+
+LIST_SRC = ft_lstadd.c\
 		ft_lstappend.c\
+		ft_lstdel.c\
+		ft_lstdelone.c\
 		ft_lstiter.c\
 		ft_lstmap.c\
-		ft_pow.c\
-		ft_min.c\
-		ft_max.c\
-		ft_get_next_line.c\
-		ft_dtoa.c\
-		ft_ndigits_base_ll.c\
-		ft_itoa_ll.c\
-		ft_ndigits_base_ull.c\
-		ft_itoa_base_ull.c\
-		ft_itoa_ull.c\
-		ft_abs.c\
-		ft_map_range.c\
-		ft_make_pair_d.c\
-		ft_abs_d.c\
-		ft_strtok.c\
-		ft_ndigits_d.c\
-		ft_strtod.c\
-		ft_swap_f.c\
-		ft_swap_d.c\
-		ft_max_d.c\
-		ft_lerp_f.c\
-		ft_inv_lerp_f.c\
-		ft_lerp_d.c\
-		ft_inv_lerp_d.c
+		ft_lstnew.c
 
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\
@@ -143,12 +145,18 @@ VEC3_SRC = ft_add_vec3.c\
 
 SRCDIR = srcs
 
+LIBC_SRCDIR = $(SRCDIR)/libc
+LIST_SRCDIR = $(SRCDIR)/list
 PF_SRCDIR = $(SRCDIR)/ft_printf
 VEC3_SRCDIR = $(SRCDIR)/vector
 
-SRCS = $(addprefix $(SRCDIR)/, $(SRC)) $(addprefix $(PF_SRCDIR)/, $(PF_SRC)) $(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))
+SRCS =	$(addprefix $(SRCDIR)/, $(SRC))\
+		$(addprefix $(LIBC_SRCDIR)/, $(LIBC_SRC))\
+		$(addprefix $(LIST_SRCDIR)/, $(LIST_SRC))\
+		$(addprefix $(PF_SRCDIR)/, $(PF_SRC))\
+		$(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))
 
-OUT = $(SRC:.c=.o) $(PF_SRC:.c=.o) $(VEC3_SRC:.c=.o)
+OUT =  $(notdir $(SRCS:.c=.o)) #$(SRC:.c=.o) $(PF_SRC:.c=.o) $(VEC3_SRC:.c=.o)
 
 INCL = includes
 
