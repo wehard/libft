@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 17:47:41 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/18 14:47:31 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/18 17:32:49 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,14 @@ typedef struct	s_vec2
 	double		x;
 	double		y;
 }				t_vec2;
+
+typedef union	u_vec3
+{
+	double		x;
+	double		y;
+	double		z;
+	double		v[3];
+}				t_uvec3;
 
 typedef struct	s_vec3
 {
