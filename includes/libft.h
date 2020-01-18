@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/16 12:00:25 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/18 12:59:24 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,5 +134,6 @@ float				ft_lerp_f(float n1, float n2, float t);
 float				ft_inv_lerp_f(float value, float a, float b);
 double				ft_lerp_d(double n1, double n2, double t);
 double				ft_inv_lerp_d(double value, double a, double b);
+double				ft_clamp_d(double d, double min, double max);
 
 #endif

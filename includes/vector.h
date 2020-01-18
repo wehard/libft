@@ -6,12 +6,24 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 17:47:41 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/16 15:10:25 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/18 14:47:31 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef VECTOR_H
 # define VECTOR_H
+
+typedef struct	s_vec2i
+{
+	int			x;
+	int			y;
+}				t_vec2i;
+
+typedef struct	s_vec2
+{
+	double		x;
+	double		y;
+}				t_vec2;
 
 typedef struct	s_vec3
 {

@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/16 15:04:08 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/18 12:59:03 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ SRC = ft_abs.c\
 		ft_strtod.c\
 		ft_strtok.c\
 		ft_swap_d.c\
-		ft_swap_f.c
+		ft_swap_f.c\
+		ft_clamp_d.c
 
 LIBC_SRC = ft_atoi.c\
 		ft_bzero.c\
