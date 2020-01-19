@@ -38,20 +38,3 @@ Libc functions | Additional functions | Bonus Functions | Personal Functions | f
 |ft_toupper		|				|				|ft_strtod
 |ft_tolower		|				|				|ft_strtok
 |				|				|				|ft_swap_d
-|				|				|				|ft_swap_f
-|				|				|				|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
