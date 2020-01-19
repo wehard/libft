@@ -1,32 +1,51 @@
 # libft
+
 Hive Helsinki Project: Implementation of various libc functions. Also includes implementation of printf.
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
-:----------- | :-----------: | :-----------: | -----------:
-memset		| ft_memalloc   | ft_lstnew     | ft_capitalize 
-bzero     | ft_memdel     | ft_lstdelone	| ft_countwords 
-memcpy		| ft_strnew     | ft_lstdel     | ft_islower    
-memccpy		| ft_strdel     | ft_lstadd     | ft_isupper    
-memmove		| ft_strclr     | ft_lstiter    | ft_strndup    
-memchr		| ft_striter    | ft_lstmap     | ft_lst_reverse
-memcmp		| ft_striteri   |               | ft_realloc
-strlen		| ft_strmap     |				| ft_strjoinch
-strdup		| ft_strmapi    |				| ft_strnchr
-strcpy		| ft_strequ     |				| ft_copyuntil
-strncpy		| ft_strnequ    |			| ft_strstartswith
-strcat		| ft_strsub     | | ft_intlen
-strlcat		| ft_strjoin    | | ft_strendswith
-strchr		| ft_strtrim    | | ft_pathjoin
-strrchr		| ft_strsplit   | | ft_lstaddback
-strstr		| ft_itoa       | | get_next_line
-strnstr		| ft_putchar    | | ft_putnstr
-strcmp		| ft_putstr     | | ft_strreplace
-strncmp		| ft_putendl    | | ft_isemptystr
-atoi      | ft_putnbr		  | | ft_strsplitall
-isalpha		| ft_putchar_fd	| | ft_countwordsall
-isdigit		| ft_putstr_fd	| | ft_freestrarr
-isalnum		| ft_putendl_fd	| | ft_strjoincl
-isascii		| ft_putnbr_fd	| | ft_strjoinchcl
-isprint		|               | | ft_count2darray
-toupper		|               | | ft_strarrmax
-tolower		|               | | ft_get_parent_path
+:----------- | :----------- | :----------- | -----------
+memset		|ft_memalloc	|ft_lstnew		|ft_abs_d
+bzero		|ft_memdel		|ft_lstdelone	|ft_clamp_d
+memcpy		|ft_strnew		|ft_lstdel		|ft_dtoa
+memccpy		|ft_strdel		|ft_lstadd		|ft_get_next_line
+memmove		|ft_strclr		|ft_lstiter		|ft_inv_lerp_d
+memchr		|ft_striter		|ft_lstmap		|ft_inv_lerp_f
+memcmp		|ft_striteri	|				|ft_itoa_base
+strlen		|ft_strmap		|				|ft_itoa_base_ull
+strdup		|ft_strmapi		|				|ft_itoa_ll
+strcpy		|ft_strequ		|				|ft_itoa_ull
+strncpy		|ft_strnequ		|				|ft_lerp_d
+strcat		|ft_strsub		|				|ft_lerp_f
+strlcat		|ft_strjoin		|				|ft_make_pair_d
+strchr		|ft_strtrim		|				|ft_map_range
+strrchr		|ft_strsplit	|				|ft_max
+strstr		|ft_itoa		|				|ft_max_d
+strnstr		|ft_putchar		|				|ft_min
+strcmp		|ft_putstr		|				|ft_ndigits_base
+strncmp		|ft_putendl		|				|ft_ndigits_base_ll
+atoi		|ft_putnbr		|				|ft_ndigits_base_ull
+isalpha		|ft_putchar_fd	|				|ft_ndigits
+isdigit		|ft_putstr_fd	|				|ft_ndigits_d
+isalnum		|ft_putendl_fd	|				|ft_nwords
+isascii		|ft_putnbr_fd	|				|ft_pow
+isprint		|				|				|ft_strrev
+toupper		|				|				|ft_strtod
+tolower		|				|				|ft_strtok
+|			|				|				|ft_swap_d
+|			|				|				|ft_swap_f
+|			|				|				|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
