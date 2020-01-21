@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/18 12:59:03 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/21 12:01:08 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -142,7 +142,21 @@ VEC3_SRC = ft_add_vec3.c\
 		ft_normalize_vec3.c\
 		ft_reflect_vec3.c\
 		ft_set_vec3.c\
-		ft_sub_vec3.c
+		ft_sub_vec3.c\
+		ft_cross_vec3.c
+
+MATRIX_SRC = ft_create_rot_mat4.c\
+		ft_create_rotx_mat4.c\
+		ft_create_roty_mat4.c\
+		ft_create_rotz_mat4.c\
+		ft_create_scale_mat4.c\
+		ft_create_trans_mat4.c\
+		ft_ident_mat4.c\
+		ft_lookat_mat4.c\
+		ft_mul_dir_vec3_mat4.c\
+		ft_mul_mat4_mat4.c\
+		ft_mul_vec3_mat4.c\
+		ft_trs_mat4.c
 
 SRCDIR = srcs
 
@@ -150,12 +164,14 @@ LIBC_SRCDIR = $(SRCDIR)/libc
 LIST_SRCDIR = $(SRCDIR)/list
 PF_SRCDIR = $(SRCDIR)/ft_printf
 VEC3_SRCDIR = $(SRCDIR)/vector
+MATRIX_SRCDIR = $(SRCDIR)/matrix
 
 SRCS =	$(addprefix $(SRCDIR)/, $(SRC))\
 		$(addprefix $(LIBC_SRCDIR)/, $(LIBC_SRC))\
 		$(addprefix $(LIST_SRCDIR)/, $(LIST_SRC))\
 		$(addprefix $(PF_SRCDIR)/, $(PF_SRC))\
-		$(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))
+		$(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))\
+		$(addprefix $(MATRIX_SRCDIR)/, $(MATRIX_SRC))
 
 OUT =  $(notdir $(SRCS:.c=.o)) #$(SRC:.c=.o) $(PF_SRC:.c=.o) $(VEC3_SRC:.c=.o)
 

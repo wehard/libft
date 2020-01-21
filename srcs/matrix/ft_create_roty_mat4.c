@@ -6,11 +6,12 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:58:50 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 10:59:08 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/21 12:00:29 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
+#include <math.h>
 
 t_mat4x4	ft_create_roty_mat4(float angle)
 {

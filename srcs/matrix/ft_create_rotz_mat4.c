@@ -6,11 +6,12 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:59:25 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 11:05:33 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/21 12:00:16 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
+#include <math.h>
 
 t_mat4x4	ft_create_rotz_mat4(float angle)
 {
