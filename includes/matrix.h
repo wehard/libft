@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:46:30 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 11:35:38 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/21 11:52:14 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ t_mat4x4		ft_create_rotz_mat4(float angle);
 t_mat4x4		ft_create_rot_mat4(t_vec3 deg_angle);
 t_mat4x4		ft_create_scale_mat4(t_vec3 scale);
 t_mat4x4		ft_trs_mat4(t_vec3 pos, t_vec3 rot, t_vec3 scale);
+t_mat4x4		ft_lookat_mat4(t_vec3 from, t_vec3 to, t_vec3 world_up);
 
 #endif
