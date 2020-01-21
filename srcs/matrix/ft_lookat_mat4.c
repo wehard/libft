@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 11:37:38 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 11:51:59 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/21 16:15:47 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_mat4x4	ft_lookat_mat4(t_vec3 from, t_vec3 to, t_vec3 world_up)
 	t_vec3		right;
 	t_vec3		up;
 
+	lookat = ft_ident_mat4();
 	forward = ft_normalize_vec3(ft_sub_vec3(from, to));
 	right = ft_cross_vec3(ft_normalize_vec3(world_up), forward);
 	up = ft_cross_vec3(forward, right);
