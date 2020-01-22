@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 14:06:21 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/22 19:20:09 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/22 21:58:02 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,70 @@ static double determinant(t_mat4x4 m)
 	return (value);
 }
 
+/*
+t_mat4x4	ft_invert_mat4(t_mat4x4 m)
+{
+	int column;
+	int row;
+	int j;
+	column = 0;
+	while (column < 4)
+	{
+		// Swap row in case our pivot point is not working
+		if (m.m[column][column] == 0)
+		{
+			unsigned big = column;
+			row = 0;
+			while (row < 4)
+			{
+				if (fabs(m.m[row][column]) > fabs(m.m[big][column]))
+					big = row;
+				row++;
+			}
+			// Print this is a singular matrix, return identity ?
+			if (big == column)
+			{
+				ft_printf("Singular matrix. Returning identity.\n");
+				return (ft_ident_mat4());
+			}
+			// Swap rows
+			else
+			{
+				j = 0;
+				while (j < 4)
+				{
+					ft_swap_d(&m.m[column][j], &m.m[big][j]);
+					ft_swap_d(&mat.m[column][j], &mat.m[big][j]);
+					j++;
+				}
+			}
+		}
+		// Set each row in the column to 0
+		for (unsigned row = 0; row < N; ++row) {
+			if (row != column) {
+				T coeff = m[row][column] / m[column][column];
+				if (coeff != 0) {
+					for (unsigned j = 0; j < N; ++j) {
+						m[row][j] -= coeff * m[column][j];
+						mat.m[row][j] -= coeff * mat.m[column][j];
+					}
+					// Set the element to 0 for safety
+					m[row][column] = 0;
+				}
+			}
+		}
+		column++;
+	}
+	// Set each element of the diagonal to 1
+	for (unsigned row = 0; row < N; ++row) {
+		for (unsigned column = 0; column < N; ++column) {
+			mat.m[row][column] /= m[row][row];
+		}
+	}
+	*this = mat;
+	return *this;
+}
+*/
 
 t_mat4x4	ft_invert_mat4(t_mat4x4 m)
 {
