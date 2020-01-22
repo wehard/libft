@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:46:30 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 17:22:38 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/22 18:28:38 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ t_mat4x4		ft_create_rot_mat4(t_vec3 deg_angle);
 t_mat4x4		ft_create_scale_mat4(t_vec3 scale);
 t_mat4x4		ft_trs_mat4(t_vec3 pos, t_vec3 rot, t_vec3 scale);
 t_mat4x4		ft_lookat_mat4(t_vec3 from, t_vec3 to, t_vec3 world_up);
+t_mat4x4		ft_transpose_mat4(t_mat4x4 m);
+t_mat4x4		ft_invert_mat4(t_mat4x4 m);
 void			ft_print_mat4(t_mat4x4 m);
 
 #endif

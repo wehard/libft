@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/21 17:22:57 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/22 18:28:48 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,7 +159,9 @@ MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_mul_mat4_mat4.c\
 		ft_mul_vec3_mat4.c\
 		ft_trs_mat4.c\
-		ft_print_mat4.c
+		ft_print_mat4.c\
+		ft_transpose_mat4.c\
+		ft_invert_mat4.c
 
 SRCDIR = srcs
 
