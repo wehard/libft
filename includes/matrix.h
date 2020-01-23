@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:46:30 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/22 18:28:38 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/23 18:58:55 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ typedef struct	s_mat4x4
 {
 	double		m[4][4];
 }				t_mat4x4;
+
+typedef struct s_mat3x3
+{
+	double		m[3][3];
+}				t_mat3x3;
 
 t_mat4x4		ft_ident_mat4(void);
 t_mat4x4		ft_mul_mat4_mat4(t_mat4x4 a, t_mat4x4 b);
