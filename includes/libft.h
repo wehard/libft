@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 16:31:09 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/25 13:50:58 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,5 +137,6 @@ double				ft_inv_lerp_d(double value, double a, double b);
 double				ft_clamp_d(double d, double min, double max);
 double				ft_deg_to_rad(double deg);
 double				ft_rad_to_deg(double rad);
+double				ft_rand_d(int *seed);
 
 #endif
