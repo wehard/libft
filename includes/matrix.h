@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:46:30 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/23 18:58:55 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/01/25 20:34:02 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct	s_mat4x4
 	double		m[4][4];
 }				t_mat4x4;
 
-typedef struct s_mat3x3
+typedef struct	s_mat3x3
 {
 	double		m[3][3];
 }				t_mat3x3;
