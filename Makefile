@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/25 13:51:20 by wkorande         ###   ########.fr        #
+#    Updated: 2020/01/27 20:57:45 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -146,7 +146,8 @@ VEC3_SRC = ft_add_vec3.c\
 		ft_reflect_vec3.c\
 		ft_set_vec3.c\
 		ft_sub_vec3.c\
-		ft_cross_vec3.c
+		ft_cross_vec3.c\
+		ft_rotate_vec3.c
 
 MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_create_rotx_mat4.c\
