@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/01/27 20:57:45 by wkorande         ###   ########.fr        #
+#    Updated: 2020/02/03 17:16:28 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -165,6 +165,15 @@ MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_transpose_mat4.c\
 		ft_invert_mat4.c
 
+COLOR_SRC = ft_add_rgba.c\
+		ft_clamp_rgba.c\
+		ft_get_color.c\
+		ft_lerp_rgba.c\
+		ft_make_rgba.c\
+		ft_mul_rgba.c\
+		ft_mul_rgba_rgba.c\
+		ft_sub_rgba.c
+
 SRCDIR = srcs
 
 LIBC_SRCDIR = $(SRCDIR)/libc
@@ -172,13 +181,15 @@ LIST_SRCDIR = $(SRCDIR)/list
 PF_SRCDIR = $(SRCDIR)/ft_printf
 VEC3_SRCDIR = $(SRCDIR)/vector
 MATRIX_SRCDIR = $(SRCDIR)/matrix
+COLOR_SRCDIR = $(SRCDIR)/color
 
 SRCS =	$(addprefix $(SRCDIR)/, $(SRC))\
 		$(addprefix $(LIBC_SRCDIR)/, $(LIBC_SRC))\
 		$(addprefix $(LIST_SRCDIR)/, $(LIST_SRC))\
 		$(addprefix $(PF_SRCDIR)/, $(PF_SRC))\
 		$(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))\
-		$(addprefix $(MATRIX_SRCDIR)/, $(MATRIX_SRC))
+		$(addprefix $(MATRIX_SRCDIR)/, $(MATRIX_SRC))\
+		$(addprefix $(COLOR_SRCDIR)/, $(COLOR_SRC))
 
 OUT =  $(notdir $(SRCS:.c=.o)) #$(SRC:.c=.o) $(PF_SRC:.c=.o) $(VEC3_SRC:.c=.o)
 
