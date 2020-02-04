@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 17:06:43 by wkorande          #+#    #+#             */
-/*   Updated: 2020/02/03 18:18:28 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/02/04 16:48:38 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ t_rgba			ft_clamp_rgba(t_rgba c);
 t_rgba			ft_mul_rgba_rgba(t_rgba a, t_rgba b);
 int				ft_get_color(t_rgba c);
 t_rgba			ft_parse_rgba(char *line);
+t_rgba			ft_blend_rgba(t_rgba c1, t_rgba c2);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/02/03 18:18:42 by wkorande         ###   ########.fr        #
+#    Updated: 2020/02/04 16:48:50 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -174,7 +174,8 @@ COLOR_SRC = ft_add_rgba.c\
 		ft_mul_rgba.c\
 		ft_mul_rgba_rgba.c\
 		ft_sub_rgba.c\
-		ft_parse_rgba.c
+		ft_parse_rgba.c\
+		ft_blend_rgba.c
 
 SRCDIR = srcs
 
