@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/02/05 12:42:28 by wkorande         ###   ########.fr        #
+#    Updated: 2020/02/06 13:48:32 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -163,8 +163,7 @@ MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_mul_vec3_mat4.c\
 		ft_trs_mat4.c\
 		ft_print_mat4.c\
-		ft_transpose_mat4.c\
-		ft_invert_mat4.c
+		ft_transpose_mat4.c
 
 COLOR_SRC = ft_add_rgba.c\
 		ft_clamp_rgba.c\
