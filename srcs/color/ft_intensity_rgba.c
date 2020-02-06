@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_next_line.h                                 :+:      :+:    :+:   */
+/*   ft_intensity_rgba.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/20 20:39:53 by wkorande          #+#    #+#             */
-/*   Updated: 2020/02/05 17:22:51 by wkorande         ###   ########.fr       */
+/*   Created: 2020/02/05 12:40:53 by wkorande          #+#    #+#             */
+/*   Updated: 2020/02/05 12:42:03 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GET_NEXT_LINE_H
-# define FT_GET_NEXT_LINE_H
+#include "color.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft.h"
-
-# define BUFF_SIZE 1024
-# define MAX_FD 4864
-
-int ft_get_next_line(const int fd, char **line);
-
-#endif
+double	ft_intensity_rgba(t_rgba c)
+{
+	return ((c.r + c.g + c.b) / 3.0);
+}
