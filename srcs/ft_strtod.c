@@ -6,13 +6,31 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 15:28:06 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/16 18:12:41 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/02/06 14:01:45 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_strtod(char *s)
+static void	init_vars(double *d, int *n, int *dig, int *dec)
+{
+	*d = 0.0;
+	*n = 0;
+	*dig = 0;
+	*dec = 0;
+}
+
+static void	check_sign(char **s, int *negptr)
+{
+	if (**s == '-' || **s == '+')
+	{
+		if (**s == '-')
+			*negptr = 1;
+		(*s)++;
+	}
+}
+
+double		ft_strtod(char *s)
 {
 	double	nbr;
 	int		negative;
@@ -21,21 +39,11 @@ double	ft_strtod(char *s)
 
 	while (*s == ' ')
 		s++;
-	negative = 0;
-	if (*s == '-' || *s == '+')
+	init_vars(&nbr, &negative, &digits, &decimals);
+	check_sign(&s, &negative);
+	while (ft_isdigit(*s) || (digits++))
 	{
-		if (*s == '-')
-			negative = 1;
-		s++;
-	}
-	nbr = 0.0;
-	digits = 0;
-	decimals = 0;
-	while (ft_isdigit(*s))
-	{
-		nbr = nbr * 10.0 + (*s - '0');
-		s++;
-		digits++;
+		nbr = nbr * 10.0 + (*(s++) - '0');
 	}
 	if (*s == '.')
 	{
