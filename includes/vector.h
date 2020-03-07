@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 17:47:41 by wkorande          #+#    #+#             */
-/*   Updated: 2020/02/03 18:16:54 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/07 12:06:20 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,7 @@ t_vec3			ft_reflect_vec3(t_vec3 v, t_vec3 n);
 t_vec3			ft_cross_vec3(t_vec3 a, t_vec3 b);
 t_vec3			ft_rotate_vec3(t_vec3 v, t_vec3 rot);
 t_vec3			ft_parse_vec3(char *str);
+
+t_vec2i			ft_make_vec2i(int x, int y);
 
 #endif
