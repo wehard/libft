@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 17:47:41 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/07 14:29:47 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/07 15:50:20 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,16 @@ t_vec3			ft_rotate_vec3(t_vec3 v, t_vec3 rot);
 t_vec3			ft_parse_vec3(char *str);
 
 t_vec2i			ft_make_vec2i(int x, int y);
-t_vec2i			ft_normalize_vec2i(t_vec2i v);
-int				ft_len_vec2i(t_vec2i v);
-t_vec2i			ft_div_vec2i(t_vec2i v, int t);
+void			ft_set_vec2i(t_vec2i *v2i, t_vec2 v2);
+t_vec2i			ft_get_vec2i(t_vec2 v);
+t_vec2			ft_make_vec2(double x, double y);
+t_vec2			ft_add_vec2(t_vec2 v1, t_vec2 v2);
+t_vec2			ft_div_vec2(t_vec2 v, double t);
+double			ft_dot_vec2(t_vec2 v1, t_vec2 v2);
+t_vec2			ft_invert_vec2(t_vec2 v);
+double			ft_len_vec2(t_vec2 v);
+t_vec2			ft_normalize_vec2(t_vec2 v);
+t_vec2			ft_sub_vec2(t_vec2 v1, t_vec2 v2);
+t_vec2			ft_mul_vec2(t_vec2 v, double t);
 
 #endif

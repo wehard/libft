@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_vec2i.c                                     :+:      :+:    :+:   */
+/*   ft_len_vec2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/07 14:28:15 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/07 14:28:47 by wkorande         ###   ########.fr       */
+/*   Created: 2020/03/07 14:24:56 by wkorande          #+#    #+#             */
+/*   Updated: 2020/03/07 15:31:25 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
+#include <math.h>
 
-t_vec2i	ft_div_vec2i(t_vec2i v, int t)
+double	ft_len_vec2(t_vec2 v)
 {
-	t_vec2i new;
+	double l;
 
-	if (t == 0)
-		return (v);
-	new.x = v.x / t;
-	new.y = v.y / t;
-	return (new);
+	if (v.x == 0.0 && v.y == 0.0)
+		return (0.0);
+	l = sqrt((v.x * v.x) + (v.y * v.y));
+	return (l);
 }

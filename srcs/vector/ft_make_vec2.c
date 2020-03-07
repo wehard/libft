@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_len_vec2i.c                                     :+:      :+:    :+:   */
+/*   ft_make_vec2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/07 14:24:56 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/07 14:26:46 by wkorande         ###   ########.fr       */
+/*   Created: 2020/03/07 15:37:08 by wkorande          #+#    #+#             */
+/*   Updated: 2020/03/07 15:41:34 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
-#include <math.h>
 
-int	ft_len_vec2i(t_vec2i v)
+t_vec2	ft_make_vec2(double x, double y)
 {
-	double l;
+	t_vec2 v;
 
-	if (v.x == 0 && v.y == 0)
-		return (0);
-	l = sqrt((v.x * v.x) + (v.y * v.y));
-	return (l);
+	v.x = x;
+	v.y = y;
+	return (v);
 }
