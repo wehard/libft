@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/07 12:08:38 by wkorande         ###   ########.fr        #
+#    Updated: 2020/03/07 12:28:06 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -204,6 +204,13 @@ all: $(NAME)
 $(NAME):
 	@printf "$(BOLDYELLOW)%s$(NORMAL)\n" "Making $(NAME)"
 	@gcc -Wall -Wextra -Werror -I $(INCL) -c $(SRCS)
+	@ar rc $(NAME) $(OUT)
+	@ranlib $(NAME)
+	@printf "$(YELLOW)%s$(NORMAL)\n" "done"
+
+gnlbuff1:
+	@printf "$(BOLDYELLOW)%s$(NORMAL)\n" "Making $(NAME)"
+	@gcc -Wall -Wextra -Werror -DBUFF_SIZE1 -I $(INCL) -c $(SRCS)
 	@ar rc $(NAME) $(OUT)
 	@ranlib $(NAME)
 	@printf "$(YELLOW)%s$(NORMAL)\n" "done"
