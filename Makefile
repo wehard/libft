@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/17 15:03:21 by wkorande         ###   ########.fr        #
+#    Updated: 2020/03/19 10:09:47 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,7 +123,8 @@ LIST_SRC = ft_lstadd.c\
 		ft_lstmap.c\
 		ft_lstnew.c\
 		ft_lstat.c\
-		ft_lstsize.c
+		ft_lstsize.c\
+		ft_lstnewptr.c
 
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\

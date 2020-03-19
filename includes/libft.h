@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/17 15:03:09 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/19 10:09:35 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstat(t_list *lst, unsigned int n);
 int					ft_lstsize(t_list *lst);
+t_list				*ft_lstnewptr(const void *ptr);
 
 /*
 ** extra functions
