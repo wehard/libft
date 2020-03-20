@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/19 10:09:47 by wkorande         ###   ########.fr        #
+#    Updated: 2020/03/20 11:28:46 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,6 +126,13 @@ LIST_SRC = ft_lstadd.c\
 		ft_lstsize.c\
 		ft_lstnewptr.c
 
+HT_SRC = ft_ht_create.c\
+		ft_ht_del.c\
+		ft_ht_get.c\
+		ft_ht_set.c\
+		ft_ht_hash_str.c\
+		ft_ht_print.c
+
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\
 		ft_pbuf.c\
@@ -196,6 +203,7 @@ SRCDIR = srcs
 
 LIBC_SRCDIR = $(SRCDIR)/libc
 LIST_SRCDIR = $(SRCDIR)/list
+HT_SRCDIR = $(SRCDIR)/hashtable
 PF_SRCDIR = $(SRCDIR)/ft_printf
 VEC3_SRCDIR = $(SRCDIR)/vector
 MATRIX_SRCDIR = $(SRCDIR)/matrix
@@ -204,10 +212,13 @@ COLOR_SRCDIR = $(SRCDIR)/color
 SRCS =	$(addprefix $(SRCDIR)/, $(SRC))\
 		$(addprefix $(LIBC_SRCDIR)/, $(LIBC_SRC))\
 		$(addprefix $(LIST_SRCDIR)/, $(LIST_SRC))\
+		$(addprefix $(HT_SRCDIR)/, $(HT_SRC))\
 		$(addprefix $(PF_SRCDIR)/, $(PF_SRC))\
 		$(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))\
 		$(addprefix $(MATRIX_SRCDIR)/, $(MATRIX_SRC))\
 		$(addprefix $(COLOR_SRCDIR)/, $(COLOR_SRC))
+
+
 
 OUT =  $(notdir $(SRCS:.c=.o)) #$(SRC:.c=.o) $(PF_SRC:.c=.o) $(VEC3_SRC:.c=.o)
 

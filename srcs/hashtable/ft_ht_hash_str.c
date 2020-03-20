@@ -6,11 +6,12 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:17:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 11:18:16 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 11:30:45 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
+#include "libft.h"
 
 size_t	ft_ht_hash_str(t_ht *ht, const char *key)
 {

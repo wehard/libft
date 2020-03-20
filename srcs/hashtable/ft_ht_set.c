@@ -6,12 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:10:47 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 11:12:35 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 11:31:41 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include <stdlib.h>
+#include "libft.h"
 
 static t_ht_e	*ft_ht_make_entry(const char *key, const char *value)
 {
@@ -35,7 +36,7 @@ void			ft_ht_set(t_ht *ht, const char *key, const char *value)
 	t_ht_e		*cur;
 	t_ht_e		*prev;
 
-	pos = ht_hash(ht, key);
+	pos = ft_ht_hash_str(ht, key);
 	cur = ht->entries[pos];
 	if (cur == NULL)
 	{
@@ -55,5 +56,5 @@ void			ft_ht_set(t_ht *ht, const char *key, const char *value)
 		prev = cur;
 		cur = prev->next;
 	}
-	prev->next = ht_make_pair(key, value);
+	prev->next = ft_ht_make_entry(key, value);
 }
