@@ -22,10 +22,10 @@ void ft_queue_print(t_queue *q)
 		ft_printf("queue is empty\n");
 	else
 	{
-		ft_printf("queue (size: %d item_size: %d)\n", q->size, q->item_size);
+		ft_printf("queue (size: %d items: %d item_size: %d)\n", q->size, q->rear + 1, q->item_size);
 		while (i <= q->rear)
 		{
-			ft_printf("%p ", &q->items[i]);
+			ft_printf("%s ", q->items[i]);
 			i++;
 		}
 		ft_printf("\n");
