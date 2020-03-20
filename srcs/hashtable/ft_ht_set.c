@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:10:47 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 11:31:41 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 12:33:52 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void			ft_ht_set(t_ht *ht, const char *key, const char *value)
 	t_ht_e		*cur;
 	t_ht_e		*prev;
 
-	pos = ft_ht_hash_str(ht, key);
+	pos = ht->hash_func(ht, key); //ft_ht_hash_str(ht, key);
 	cur = ht->entries[pos];
 	if (cur == NULL)
 	{

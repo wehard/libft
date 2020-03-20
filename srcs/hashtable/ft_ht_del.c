@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:14:03 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 11:47:59 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 12:26:08 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void			ft_ht_del(t_ht *ht, const char *key)
 	t_ht_e	*cur;
 	t_ht_e	*prev;
 
-	pos = ft_ht_hash_str(ht, key);
+	pos = (*ht->hash_func)(ht, key); //ft_ht_hash_str(ht, key);
 	cur = ht->entries[pos];
 	if (!cur)
 		return ;
