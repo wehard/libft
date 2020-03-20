@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:12:54 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 11:30:28 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 11:38:39 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include "libft.h"
 
-char			*ht_get(t_ht *ht, const char *key)
+char			*ft_ht_get(t_ht *ht, const char *key)
 {
 	size_t	pos;
 	t_ht_e	*cur;

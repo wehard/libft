@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:15:21 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 11:15:53 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 11:39:02 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include "ft_printf.h"
 
-void print_ht(t_ht *ht)
+void ft_ht_print(t_ht *ht)
 {
 	unsigned int i;
 
