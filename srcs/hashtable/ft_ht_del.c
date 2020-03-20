@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:14:03 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 12:26:08 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 13:43:07 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include "libft.h"
 
-void			ft_ht_del(t_ht *ht, const char *key)
+void			ft_ht_del(t_ht *ht, const void *key)
 {
 	int		i;
 	size_t	pos;
@@ -27,7 +27,7 @@ void			ft_ht_del(t_ht *ht, const char *key)
 	i = 0;
 	while (cur)
 	{
-		if (ft_strcmp(cur->key, key) == 0)
+		if (ft_memcmp(cur->key, key, ht->key_size) == 0)
 		{
 			if (i == 0 && !cur->next)
 				ht->entries[pos] = NULL;
