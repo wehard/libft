@@ -6,14 +6,14 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:14:03 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 11:29:50 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/20 11:47:59 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include "libft.h"
 
-void			ht_del(t_ht *ht, const char *key)
+void			ft_ht_del(t_ht *ht, const char *key)
 {
 	int		i;
 	size_t	pos;
