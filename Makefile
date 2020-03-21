@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/20 14:22:42 by wkorande         ###   ########.fr        #
+#    Updated: 2020/03/21 12:10:17 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,6 +131,7 @@ HT_SRC = ft_ht_create.c\
 		ft_ht_get.c\
 		ft_ht_set.c\
 		ft_ht_hash_str.c\
+		ft_ht_hash_int.c\
 		ft_ht_print.c
 
 Q_SRC = ft_queue_dequeue.c\

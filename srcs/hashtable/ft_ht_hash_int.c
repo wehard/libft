@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ht_get.c                                        :+:      :+:    :+:   */
+/*   ft_ht_hash_int.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/20 11:12:54 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/21 11:23:56 by wkorande         ###   ########.fr       */
+/*   Created: 2020/03/21 12:08:49 by wkorande          #+#    #+#             */
+/*   Updated: 2020/03/21 12:13:35 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_ht_get(t_ht *ht, const void *key)
+size_t	ft_ht_hash_int(const void *htptr, const void *keyptr)
 {
-	size_t	pos;
-	t_ht_e	*cur;
+	size_t	value;
 
-	pos = (*ht->hash_func)(ht, key); //ft_ht_hash_str(ht, key);
-	cur = ht->entries[pos];
-	if (!cur)
-		return (NULL);
-	while (cur)
+	value = (size_t)*(int*)keyptr;
+	if (value >= ((t_ht*)htptr)->size)
 	{
-		if (ft_memcmp(cur->key, key, ht->key_size) == 0)
-			return (cur->value);
-		cur = cur->next;
+		ft_printf("ft_ht_hash_int: overflow with pos %d in table size %d\n", value, ((t_ht*)htptr)->size);
+		return (0);
 	}
-	return (NULL);
+	return (value);
 }

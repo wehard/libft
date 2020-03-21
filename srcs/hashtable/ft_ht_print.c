@@ -6,14 +6,24 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:15:21 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 13:43:58 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/21 12:18:28 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include "ft_printf.h"
 
-void ft_ht_print(t_ht *ht)
+void ft_ht_print_kv_int(t_ht_e *e)
+{
+	ft_printf("%d:%d ", *(int*)(e->key), *(int*)(e->value));
+}
+
+void ft_ht_print_kv_str(t_ht_e *e)
+{
+	ft_printf("%s:%s ", (char*)(e->key), (char*)(e->value));
+}
+
+void ft_ht_print(t_ht *ht, void (*print_kv)(t_ht_e*))
 {
 	unsigned int i;
 
@@ -28,7 +38,7 @@ void ft_ht_print(t_ht *ht)
 		ft_printf("[%3d]: ", i);
 		while(1)
 		{
-			ft_printf("%s:%s ", entry->key, entry->value);
+			print_kv(entry);
 			if (entry->next == NULL) {
 				break;
 			}

@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:28:44 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 13:41:28 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/21 12:16:12 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,14 @@ typedef struct		s_ht
 
 t_ht				*ft_ht_create(size_t size, t_hash_func hash_func, size_t k_size, size_t v_size);
 void				ft_ht_set(t_ht *ht, const void *key, const void *value);
-char				*ft_ht_get(t_ht *ht, const void *key);
+void				*ft_ht_get(t_ht *ht, const void *key);
 void				ft_ht_del(t_ht *ht, const void *key);
-void				ft_ht_print(t_ht *ht);
+
+void				ft_ht_print_kv_int(t_ht_e *e);
+void				ft_ht_print_kv_str(t_ht_e *e);
+void				ft_ht_print(t_ht *ht, void (*print_kv)(t_ht_e*));
 
 size_t				ft_ht_hash_str(const void *htptr, const void *keyptr);
+size_t				ft_ht_hash_int(const void *htptr, const void *keyptr);
 
 #endif
