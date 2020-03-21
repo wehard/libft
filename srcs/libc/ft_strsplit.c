@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 12:09:06 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/20 17:17:07 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/21 19:50:58 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ static int	ft_wordlen(char *str, char end)
 char		**ft_strsplit(char const *s, char c)
 {
 	char	**strs;
-	int		nwords;
-	int		i;
+	size_t	nwords;
+	size_t	i;
 	int		len;
 
 	nwords = ft_nwords((char*)s, c);
-	if (!(strs = (char**)malloc(sizeof(char*) * nwords + 1)))
+	if (!(strs = (char**)malloc(sizeof(char*) * (nwords + 1))))
 		return (NULL);
 	i = 0;
 	while (i < nwords)
@@ -39,13 +39,13 @@ char		**ft_strsplit(char const *s, char c)
 		while (*s == c)
 			s++;
 		len = ft_wordlen((char*)s, c);
-		if (!(strs[i] = (char*)malloc(sizeof(char) * len + 1)))
+		if (!(strs[i] = (char*)malloc(sizeof(char) * (len + 1))))
 			return (NULL);
-		strs[i] = ft_strncpy(strs[i], s, len);
+		ft_memcpy(strs[i], s, len);
 		strs[i][len] = '\0';
 		s += len;
 		i++;
 	}
-	strs[i] = 0;
+	strs[nwords] = NULL;
 	return (strs);
 }
