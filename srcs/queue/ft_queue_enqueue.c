@@ -6,11 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 14:14:04 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 14:24:01 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/21 17:05:27 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue.h"
+#include "libft.h"
+#include "ft_printf.h"
 
 void ft_queue_enqueue(t_queue *q, void *item)
 {
@@ -20,7 +22,19 @@ void ft_queue_enqueue(t_queue *q, void *item)
 	{
 		if (q->front == -1)
 			q->front = 0;
-		q->rear++;
-		q->items[q->rear] = item;
+		if (q->type == QUEUE_REF)
+		{
+			q->rear++;
+			q->ref_items[q->rear] = item;
+		}
+		else if (q->type == QUEUE_COPY)
+		{
+			if (q->rear == -1)
+				q->rear++;
+			else
+				q->rear += q->item_size;
+			ft_memcpy((void*)&q->copy_items[q->rear], item, q->item_size);
+
+		}
 	}
 }

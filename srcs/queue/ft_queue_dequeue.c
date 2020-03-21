@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 14:14:59 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 14:31:18 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/21 16:57:30 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,14 @@ void *ft_queue_dequeue(t_queue *q)
 		item = NULL;
 	else
 	{
-		item = q->items[q->front];
-		q->front++;
+		if (q->type == QUEUE_REF)
+			item = q->ref_items[q->front];
+		else if (q->type == QUEUE_COPY)
+			item = (void*)&q->copy_items[q->front];
+		if (q->type == QUEUE_REF)
+			q->front++;
+		else if (q->type == QUEUE_COPY)
+			q->front += q->item_size;
 		if (q->front > q->rear)
 		{
 			q->front = -1;

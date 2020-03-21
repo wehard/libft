@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 16:16:58 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/21 15:23:13 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/21 16:23:48 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,24 @@
 
 # include <stdlib.h>
 
+typedef enum
+{
+	QUEUE_REF,
+	QUEUE_COPY
+}				e_q_type;
+
 typedef struct	s_queue
 {
+	e_q_type	type;
 	size_t		size;
 	size_t		item_size;
-	void		**items;
+	void		**ref_items;
+	char		*copy_items;
 	int			front;
 	int			rear;
 }				t_queue;
 
-t_queue			*ft_queue_create(size_t size, size_t item_size);
+t_queue			*ft_queue_create(e_q_type type, size_t size, size_t item_size);
 void			ft_queue_destroy(t_queue *q);
 int				ft_queue_isempty(t_queue *q);
 void			ft_queue_enqueue(t_queue *q, void *item);

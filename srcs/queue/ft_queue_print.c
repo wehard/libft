@@ -30,8 +30,16 @@ void ft_queue_print(t_queue *q, void (*print_item)(void*))
 		ft_printf("queue (size: %d items: %d item_size: %d)\n", q->size, q->rear + 1, q->item_size);
 		while (i <= q->rear)
 		{
-			print_item(q->items[i]);
-			i++;
+			if (q->type == QUEUE_REF)
+			{
+				print_item(q->ref_items[i]);
+				i++;
+			}
+			if (q->type == QUEUE_COPY)
+			{
+				print_item(q->ref_items[i]);
+				i += q->item_size;
+			}
 		}
 		ft_printf("\n");
 	}
