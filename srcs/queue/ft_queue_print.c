@@ -13,7 +13,12 @@
 #include "ft_queue.h"
 #include "ft_printf.h"
 
-void ft_queue_print(t_queue *q)
+void	ft_queue_print_item_int(void *item)
+{
+	ft_printf("%d ", *(int*)item);
+}
+
+void ft_queue_print(t_queue *q, void (*print_item)(void*))
 {
 	int i;
 
@@ -25,7 +30,7 @@ void ft_queue_print(t_queue *q)
 		ft_printf("queue (size: %d items: %d item_size: %d)\n", q->size, q->rear + 1, q->item_size);
 		while (i <= q->rear)
 		{
-			ft_printf("%s ", q->items[i]);
+			print_item(q->items[i]);
 			i++;
 		}
 		ft_printf("\n");
