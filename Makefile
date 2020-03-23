@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/23 10:37:27 by wkorande         ###   ########.fr        #
+#    Updated: 2020/03/23 18:47:07 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,6 +128,7 @@ LIST_SRC = ft_lstadd.c\
 		ft_lstnewptr.c
 
 HT_SRC = ft_ht_create.c\
+		ft_ht_destroy.c\
 		ft_ht_del.c\
 		ft_ht_get.c\
 		ft_ht_set.c\
