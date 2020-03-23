@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/19 10:09:35 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/23 10:36:34 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,7 @@ double				ft_abs_d(double d);
 char				*ft_strtok(char *src, const char *delims);
 int					ft_ndigits_d(long double d);
 double				ft_strtod(char *str);
+void				ft_free_array(void **arr);
 
 void				ft_swap_f(float *f1, float *f2);
 void				ft_swap_d(double *d1, double *d2);
