@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/23 18:47:07 by wkorande         ###   ########.fr        #
+#    Updated: 2020/03/23 20:13:51 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -143,6 +143,10 @@ Q_SRC = ft_queue_dequeue.c\
 		ft_queue_destroy.c\
 		ft_queue_create.c
 
+ST_SRC = ft_stack_create.c\
+		ft_stack_push.c\
+		ft_stack_pop.c
+
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\
 		ft_pbuf.c\
@@ -215,6 +219,7 @@ LIBC_SRCDIR = $(SRCDIR)/libc
 LIST_SRCDIR = $(SRCDIR)/list
 HT_SRCDIR = $(SRCDIR)/hashtable
 Q_SRCDIR = $(SRCDIR)/queue
+ST_SRCDIR = $(SRCDIR)/stack
 PF_SRCDIR = $(SRCDIR)/ft_printf
 VEC3_SRCDIR = $(SRCDIR)/vector
 MATRIX_SRCDIR = $(SRCDIR)/matrix
@@ -225,6 +230,7 @@ SRCS =	$(addprefix $(SRCDIR)/, $(SRC))\
 		$(addprefix $(LIST_SRCDIR)/, $(LIST_SRC))\
 		$(addprefix $(HT_SRCDIR)/, $(HT_SRC))\
 		$(addprefix $(Q_SRCDIR)/, $(Q_SRC))\
+		$(addprefix $(ST_SRCDIR)/, $(ST_SRC))\
 		$(addprefix $(PF_SRCDIR)/, $(PF_SRC))\
 		$(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))\
 		$(addprefix $(MATRIX_SRCDIR)/, $(MATRIX_SRC))\
