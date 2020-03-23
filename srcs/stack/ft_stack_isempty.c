@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_pop.c                                     :+:      :+:    :+:   */
+/*   ft_stack_isempty.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/23 20:06:02 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/23 20:44:15 by wkorande         ###   ########.fr       */
+/*   Created: 2020/03/23 20:39:14 by wkorande          #+#    #+#             */
+/*   Updated: 2020/03/23 20:44:05 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stack.h"
-#include "ft_printf.h"
 
-void	*ft_stack_pop(t_stack *s)
+int	ft_stack_isempty(t_stack *s)
 {
-	void *p;
-
-	if (ft_stack_isempty(s))
-		return (NULL);
-	s->ptr -= s->item_size;
-	p = s->items + s->ptr;
-	return (p);
+	if (s->ptr == 0)
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 19:52:14 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/23 20:14:10 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/03/23 20:42:19 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ typedef struct s_stack
 t_stack			*ft_stack_create(size_t size, size_t item_size);
 void			ft_stack_push(t_stack *s, void *item);
 void			*ft_stack_pop(t_stack *s);
+int				ft_stack_isempty(t_stack *s);
 #endif
