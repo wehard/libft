@@ -6,7 +6,7 @@
 #    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/23 20:43:10 by wkorande         ###   ########.fr        #
+#    Updated: 2020/03/23 21:10:20 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -146,7 +146,8 @@ Q_SRC = ft_queue_dequeue.c\
 ST_SRC = ft_stack_create.c\
 		ft_stack_push.c\
 		ft_stack_pop.c\
-		ft_stack_isempty.c
+		ft_stack_isempty.c\
+		ft_stack_destroy.c
 
 PF_SRC = ft_printf.c\
 		ft_sprintf.c\

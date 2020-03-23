@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack.h                                         :+:      :+:    :+:   */
+/*   ft_stack_destroy.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/23 19:52:14 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/23 21:09:59 by wkorande         ###   ########.fr       */
+/*   Created: 2020/03/23 21:08:38 by wkorande          #+#    #+#             */
+/*   Updated: 2020/03/23 21:09:47 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STACK_H
-# define FT_STACK_H
+#include "ft_stack.h"
 
-#include <stdlib.h>
-
-typedef struct s_stack
+void	ft_stack_destroy(t_stack *s)
 {
-	size_t		size;
-	size_t		item_size;
-	void		*items;
-	size_t		ptr;
-}				t_stack;
-
-t_stack			*ft_stack_create(size_t size, size_t item_size);
-void			ft_stack_push(t_stack *s, void *item);
-void			*ft_stack_pop(t_stack *s);
-int				ft_stack_isempty(t_stack *s);
-void			ft_stack_destroy(t_stack *s);
-#endif
+	if (!s || !s->items)
+		return ;
+	free(s->items);
+	free(s);
+}
