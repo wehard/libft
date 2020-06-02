@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 14:14:04 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/21 17:05:27 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 17:52:45 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void ft_queue_enqueue(t_queue *q, void *item)
+void	ft_queue_enqueue(t_queue *q, void *item)
 {
 	if (q->rear == (int)q->size - 1)
-		return;
+		return ;
 	else
 	{
 		if (q->front == -1)
@@ -34,7 +34,6 @@ void ft_queue_enqueue(t_queue *q, void *item)
 			else
 				q->rear += q->item_size;
 			ft_memcpy((void*)&q->copy_items[q->rear], item, q->item_size);
-
 		}
 	}
 }

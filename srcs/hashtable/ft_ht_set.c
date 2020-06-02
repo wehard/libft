@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:10:47 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 13:40:55 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 17:53:40 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ static t_ht_e	*ft_ht_make_entry(t_ht *ht, const void *key, const void *value)
 void			ft_ht_set(t_ht *ht, const void *key, const void *value)
 {
 	unsigned int	pos;
-	t_ht_e		*cur;
-	t_ht_e		*prev;
+	t_ht_e			*cur;
+	t_ht_e			*prev;
 
-	pos = ht->hash_func(ht, key); //ft_ht_hash_str(ht, key);
+	pos = ht->hash_func(ht, key);
 	cur = ht->entries[pos];
 	if (cur == NULL)
 	{
-		ht->entries[pos] = ft_ht_make_entry(ht, key, value); //ht->pair_func(ht, key, value)
+		ht->entries[pos] = ft_ht_make_entry(ht, key, value);
 		return ;
 	}
 	while (cur)

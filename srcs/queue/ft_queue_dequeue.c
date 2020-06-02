@@ -6,16 +6,17 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 14:14:59 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/21 16:57:30 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 18:18:28 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue.h"
 
-void *ft_queue_dequeue(t_queue *q)
+void	*ft_queue_dequeue(t_queue *q)
 {
 	void *item;
 
+	item = NULL;
 	if (ft_queue_isempty(q))
 		item = NULL;
 	else

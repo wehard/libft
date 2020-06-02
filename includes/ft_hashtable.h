@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:28:44 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/23 18:46:34 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 18:03:46 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 
-typedef size_t (*t_hash_func)(const void *ht, const void *ptr);
+typedef size_t		(*t_hash_func)(const void *ht, const void *ptr);
 
 typedef struct		s_ht_e
 {
@@ -24,7 +24,8 @@ typedef struct		s_ht_e
 	struct s_ht_e	*next;
 }					t_ht_e;
 
-typedef t_ht_e *(*t_pair_func)(const void *ht, const void *key, const void *value);
+// typedef t_ht_e		*(*t_pair_func)(const void *ht, const void *key,\
+// 	const void *value);
 
 typedef struct		s_ht
 {
@@ -35,8 +36,8 @@ typedef struct		s_ht
 	size_t			value_size;
 }					t_ht;
 
-
-t_ht				*ft_ht_create(size_t size, t_hash_func hash_func, size_t k_size, size_t v_size);
+t_ht				*ft_ht_create(size_t size, t_hash_func hash_func,\
+	size_t k_size, size_t v_size);
 void				ft_ht_destroy(t_ht *ht);
 void				ft_ht_set(t_ht *ht, const void *key, const void *value);
 void				*ft_ht_get(t_ht *ht, const void *key);

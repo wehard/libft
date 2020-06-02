@@ -6,13 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 14:11:58 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/21 16:24:14 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 18:06:41 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue.h"
 
-t_queue *ft_queue_create(e_q_type type, size_t size, size_t item_size)
+t_queue	*ft_queue_create(t_q_type type, size_t size, size_t item_size)
 {
 	t_queue *q;
 

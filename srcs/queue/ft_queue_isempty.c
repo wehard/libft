@@ -6,13 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 14:13:27 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 14:13:40 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 17:52:22 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue.h"
 
-int ft_queue_isempty(t_queue *q)
+int	ft_queue_isempty(t_queue *q)
 {
 	if (q->rear == -1)
 		return (1);

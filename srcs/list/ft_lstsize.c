@@ -6,13 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 15:01:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/17 15:02:49 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 17:53:13 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int c;
 

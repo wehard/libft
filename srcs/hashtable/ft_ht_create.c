@@ -6,14 +6,15 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:04:49 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/20 13:41:41 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 18:08:38 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include <stdlib.h>
 
-t_ht	*ft_ht_create(size_t size, t_hash_func hash_func, size_t k_size, size_t v_size)
+t_ht	*ft_ht_create(size_t size, t_hash_func hash_func,\
+	size_t k_size, size_t v_size)
 {
 	t_ht	*ht;
 	size_t	i;

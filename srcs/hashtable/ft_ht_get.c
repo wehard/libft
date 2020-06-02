@@ -6,7 +6,7 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/20 11:12:54 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/21 11:23:56 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 18:13:28 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_ht_get(t_ht *ht, const void *key)
 	size_t	pos;
 	t_ht_e	*cur;
 
-	pos = (*ht->hash_func)(ht, key); //ft_ht_hash_str(ht, key);
+	pos = (*ht->hash_func)(ht, key);
 	cur = ht->entries[pos];
 	if (!cur)
 		return (NULL);

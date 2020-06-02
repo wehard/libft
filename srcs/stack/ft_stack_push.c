@@ -6,14 +6,13 @@
 /*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 19:59:30 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/23 20:26:23 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/02 17:51:42 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stack.h"
 #include "libft.h"
 #include "ft_printf.h"
-
 
 void	ft_stack_push(t_stack *s, void *item)
 {
