@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+         #
+#    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/03/23 21:10:20 by wkorande         ###   ########.fr        #
+#    Updated: 2020/06/04 14:09:21 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -244,18 +244,20 @@ OUT =  $(notdir $(SRCS:.c=.o)) #$(SRC:.c=.o) $(PF_SRC:.c=.o) $(VEC3_SRC:.c=.o)
 
 INCL = includes
 
+CC = clang
+
 all: $(NAME)
 
 $(NAME):
 	@printf "$(BOLDYELLOW)%s$(NORMAL)\n" "Making $(NAME)"
-	@gcc -Wall -Wextra -Werror -I $(INCL) -c $(SRCS)
+	@$(CC) -Wall -Wextra -Werror -I $(INCL) -c $(SRCS)
 	@ar rc $(NAME) $(OUT)
 	@ranlib $(NAME)
 	@printf "$(YELLOW)%s$(NORMAL)\n" "done"
 
 gnlbuff1:
 	@printf "$(BOLDYELLOW)%s$(NORMAL)\n" "Making $(NAME)"
-	@gcc -Wall -Wextra -Werror -DBUFF_SIZE1 -I $(INCL) -c $(SRCS)
+	@$(CC) -Wall -Wextra -Werror -DBUFF_SIZE1 -I $(INCL) -c $(SRCS)
 	@ar rc $(NAME) $(OUT)
 	@ranlib $(NAME)
 	@printf "$(YELLOW)%s$(NORMAL)\n" "done"
