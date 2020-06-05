@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/23 10:36:34 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/05 13:26:31 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,7 @@ float				ft_inv_lerp_f(float value, float a, float b);
 double				ft_lerp_d(double n1, double n2, double t);
 double				ft_inv_lerp_d(double value, double a, double b);
 double				ft_clamp_d(double d, double min, double max);
+double				ft_clamp_d0(double d, double min, double max);
 double				ft_deg_to_rad(double deg);
 double				ft_rad_to_deg(double rad);
 double				ft_rand_d(int *seed);

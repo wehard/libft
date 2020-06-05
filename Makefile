@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/06/04 14:09:21 by wkorande         ###   ########.fr        #
+#    Updated: 2020/06/05 13:25:45 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ SRC = ft_abs.c\
 		ft_swap_d.c\
 		ft_swap_f.c\
 		ft_clamp_d.c\
+		ft_clamp_d0.c\
 		ft_deg_to_rad.c\
 		ft_rad_to_deg.c\
 		ft_rand_d.c\
