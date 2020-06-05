@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hashtable.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:28:44 by wkorande          #+#    #+#             */
-/*   Updated: 2020/06/02 18:03:46 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/05 08:54:31 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ typedef struct		s_ht_e
 	struct s_ht_e	*next;
 }					t_ht_e;
 
-// typedef t_ht_e		*(*t_pair_func)(const void *ht, const void *key,\
-// 	const void *value);
+/*
+** typedef t_ht_e		*(*t_pair_func)(const void *ht, const void *key,\
+** 	const void *value);
+*/
 
 typedef struct		s_ht
 {
