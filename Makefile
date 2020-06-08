@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/06/05 13:25:45 by wkorande         ###   ########.fr        #
+#    Updated: 2020/06/08 10:57:20 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -176,6 +176,7 @@ VEC3_SRC = ft_add_vec3.c\
 		ft_cross_vec3.c\
 		ft_rotate_vec3.c\
 		ft_parse_vec3.c\
+		ft_clamp_vec3.c\
 		ft_make_vec2i.c\
 		ft_set_vec2i.c\
 		ft_get_vec2i.c\

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 17:47:41 by wkorande          #+#    #+#             */
-/*   Updated: 2020/03/07 15:50:20 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/08 10:56:46 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ double			ft_len_vec2(t_vec2 v);
 t_vec2			ft_normalize_vec2(t_vec2 v);
 t_vec2			ft_sub_vec2(t_vec2 v1, t_vec2 v2);
 t_vec2			ft_mul_vec2(t_vec2 v, double t);
+
+t_vec3			ft_clamp_vec3(t_vec3 v, double min, double max);
 
 #endif
