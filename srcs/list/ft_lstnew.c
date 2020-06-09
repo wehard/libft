@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 17:07:16 by wkorande          #+#    #+#             */
-/*   Updated: 2019/10/18 17:40:07 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/06/09 14:04:10 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *list;
 
-	if (!(list = (t_list*)malloc(sizeof(*list))))
+	if (!(list = (t_list*)malloc(sizeof(t_list))))
 		return (NULL);
 	if (content == NULL)
 	{
