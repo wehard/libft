@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/06/08 10:57:20 by wkorande         ###   ########.fr        #
+#    Updated: 2020/06/09 15:27:58 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -253,6 +253,13 @@ all: $(NAME)
 $(NAME):
 	@printf "$(BOLDYELLOW)%s$(NORMAL)\n" "Making $(NAME)"
 	@$(CC) -Wall -Wextra -Werror -I $(INCL) -c $(SRCS)
+	@ar rc $(NAME) $(OUT)
+	@ranlib $(NAME)
+	@printf "$(YELLOW)%s$(NORMAL)\n" "done"
+
+debug:
+	@printf "$(BOLDYELLOW)%s$(NORMAL)\n" "Making debug $(NAME)"
+	@$(CC) -g -Wall -Wextra -Werror -I $(INCL) -c $(SRCS)
 	@ar rc $(NAME) $(OUT)
 	@ranlib $(NAME)
 	@printf "$(YELLOW)%s$(NORMAL)\n" "done"
