@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/06/09 15:27:58 by wkorande         ###   ########.fr        #
+#    Updated: 2020/07/03 19:51:29 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -188,7 +188,8 @@ VEC3_SRC = ft_add_vec3.c\
 		ft_len_vec2.c\
 		ft_normalize_vec2.c\
 		ft_sub_vec2.c\
-		ft_mul_vec2.c
+		ft_mul_vec2.c\
+		ft_parse_vec2.c
 
 MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_create_rotx_mat4.c\
