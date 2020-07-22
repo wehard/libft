@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lerp_rgba.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: rjaakonm <rjaakonm@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 17:10:48 by wkorande          #+#    #+#             */
-/*   Updated: 2020/02/03 17:11:10 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/07/22 16:24:59 by rjaakonm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ t_rgba	ft_lerp_rgba(t_rgba c1, t_rgba c2, double t)
 	color.g = ft_lerp_d(c1.g, c2.g, t);
 	color.b = ft_lerp_d(c1.b, c2.b, t);
 	color.a = ft_lerp_d(c1.a, c2.a, t);
+	color = ft_clamp_rgba(color);
 	return (color);
 }
