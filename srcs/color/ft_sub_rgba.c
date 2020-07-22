@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sub_rgba.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: rjaakonm <rjaakonm@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 17:10:08 by wkorande          #+#    #+#             */
-/*   Updated: 2020/02/03 17:10:15 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/07/22 16:24:14 by rjaakonm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_rgba	ft_sub_rgba(t_rgba c1, t_rgba c2)
 {
-	c1.r -= c2.r;
-	c1.g -= c2.g;
-	c1.b -= c2.b;
-	c1.a -= c2.a;
+	c1.r -= c2.a * c2.r;
+	c1.g -= c2.a * c2.g;
+	c1.b -= c2.a * c2.b;
+	c1 = ft_clamp_rgba(c1);
 	return (c1);
 }

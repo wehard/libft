@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mul_rgba_rgba.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: rjaakonm <rjaakonm@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 17:09:24 by wkorande          #+#    #+#             */
-/*   Updated: 2020/02/03 17:09:31 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/07/22 16:23:32 by rjaakonm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ t_rgba	ft_mul_rgba_rgba(t_rgba a, t_rgba b)
 	a.g *= b.g;
 	a.b *= b.b;
 	a.a *= b.a;
+	a = ft_clamp_rgba(a);
 	return (a);
 }
