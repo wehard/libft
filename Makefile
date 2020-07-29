@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/07/03 19:51:29 by wkorande         ###   ########.fr        #
+#    Updated: 2020/07/29 22:01:52 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -207,6 +207,7 @@ MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_transpose_mat4.c
 
 COLOR_SRC = ft_add_rgba.c\
+		ft_add_rgba_uc.c\
 		ft_clamp_rgba.c\
 		ft_get_color.c\
 		ft_lerp_rgba.c\
