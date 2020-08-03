@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/08/03 13:44:11 by wkorande         ###   ########.fr        #
+#    Updated: 2020/08/03 14:01:06 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,8 @@ SRC = ft_abs.c\
 		ft_rad_to_deg.c\
 		ft_rand_d.c\
 		ft_free_array.c\
-		ft_clamp_range.c
+		ft_clamp_range.c\
+		ft_pow_d.c
 
 LIBC_SRC = ft_atoi.c\
 		ft_bzero.c\
@@ -190,7 +191,8 @@ VEC3_SRC = ft_add_vec3.c\
 		ft_normalize_vec2.c\
 		ft_sub_vec2.c\
 		ft_mul_vec2.c\
-		ft_parse_vec2.c
+		ft_parse_vec2.c\
+		ft_refract_vec3.c
 
 MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_create_rotx_mat4.c\

@@ -6,7 +6,7 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 17:47:41 by wkorande          #+#    #+#             */
-/*   Updated: 2020/08/01 17:17:44 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/08/03 13:52:24 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ double			ft_dot_vec3(t_vec3 v1, t_vec3 v2);
 t_vec3			ft_normalize_vec3(t_vec3 v);
 t_vec3			ft_invert_vec3(t_vec3 v);
 t_vec3			ft_reflect_vec3(t_vec3 v, t_vec3 n);
+t_vec3			ft_refract_vec3(t_vec3 i, t_vec3 normal, double ior);
 t_vec3			ft_cross_vec3(t_vec3 a, t_vec3 b);
 t_vec3			ft_rotate_vec3(t_vec3 v, t_vec3 rot);
 t_vec3			ft_rotate_vec3_x(t_vec3 v, double a);
