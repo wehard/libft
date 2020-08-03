@@ -6,7 +6,7 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 13:38:26 by wkorande          #+#    #+#             */
-/*   Updated: 2020/06/05 13:26:31 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/08/03 13:43:49 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,5 +143,7 @@ double				ft_clamp_d0(double d, double min, double max);
 double				ft_deg_to_rad(double deg);
 double				ft_rad_to_deg(double rad);
 double				ft_rand_d(int *seed);
+double				ft_clamp_range(double v, double min, double max);
+double				ft_pow_d(double n, unsigned int p);
 
 #endif

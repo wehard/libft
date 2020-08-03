@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/07/29 22:08:01 by wkorande         ###   ########.fr        #
+#    Updated: 2020/08/03 13:44:11 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,8 @@ SRC = ft_abs.c\
 		ft_deg_to_rad.c\
 		ft_rad_to_deg.c\
 		ft_rand_d.c\
-		ft_free_array.c
+		ft_free_array.c\
+		ft_clamp_range.c
 
 LIBC_SRC = ft_atoi.c\
 		ft_bzero.c\
