@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/11/13 22:57:05 by wkorande         ###   ########.fr        #
+#    Updated: 2020/11/13 23:06:43 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -224,7 +224,7 @@ COLOR_SRC = ft_add_rgba.c\
 		ft_intensity_rgba.c\
 		ft_div_rgba.c
 
-SRCDIR = srcs
+SRCDIR = src
 
 LIBC_SRCDIR = $(SRCDIR)/libc
 LIST_SRCDIR = $(SRCDIR)/list
