@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_rot_mat4.c                               :+:      :+:    :+:   */
+/*   ft_normalize_vec2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/21 11:00:09 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:04:29 by wkorande         ###   ########.fr       */
+/*   Created: 2020/03/07 14:23:55 by wkorande          #+#    #+#             */
+/*   Updated: 2020/11/13 23:01:17 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
-#include "vec3.h"
-#include <math.h>
+#include "vec2.h"
 
-t_mat4x4	ft_create_rot_mat4(t_vec3 deg_angle)
+t_vec2	ft_normalize_vec2(t_vec2 v)
 {
-	t_mat4x4 mat;
+	t_vec2 new;
+	double l;
 
-	mat = ft_create_roty_mat4(deg_angle.y * (M_PI / 180.0f));
-	mat = ft_mul_mat4_mat4(mat,
-		ft_create_rotx_mat4(deg_angle.x * (M_PI / 180.0f)));
-	mat = ft_mul_mat4_mat4(mat,
-		ft_create_rotz_mat4(deg_angle.z * (M_PI / 180.0f)));
-	return (mat);
+	l = ft_len_vec2(v);
+	new = ft_div_vec2(v, l);
+	return (new);
 }

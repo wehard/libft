@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   matrix.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:46:30 by wkorande          #+#    #+#             */
-/*   Updated: 2020/02/06 13:48:25 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/13 23:03:38 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATRIX_H
 # define MATRIX_H
 
-# include "vector.h"
+# include "vec3.h"
 
 typedef struct	s_mat4x4
 {

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_trs_mat4.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:48:47 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 11:06:34 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/13 23:05:09 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
-#include "vector.h"
+#include "vec3.h"
 
 t_mat4x4	ft_trs_mat4(t_vec3 pos, t_vec3 rot, t_vec3 scale)
 {

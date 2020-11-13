@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_scale_mat4.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:55:01 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 10:55:23 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/13 23:04:37 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
-#include "vector.h"
+#include "vec3.h"
 
 t_mat4x4	ft_create_scale_mat4(t_vec3 scale)
 {

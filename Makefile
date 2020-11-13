@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/08/03 14:01:06 by wkorande         ###   ########.fr        #
+#    Updated: 2020/11/13 22:57:05 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -179,7 +179,9 @@ VEC3_SRC = ft_add_vec3.c\
 		ft_rotate_vec3.c\
 		ft_parse_vec3.c\
 		ft_clamp_vec3.c\
-		ft_make_vec2i.c\
+		ft_refract_vec3.c
+
+VEC2_SRC = ft_make_vec2i.c\
 		ft_set_vec2i.c\
 		ft_get_vec2i.c\
 		ft_make_vec2.c\
@@ -191,8 +193,7 @@ VEC3_SRC = ft_add_vec3.c\
 		ft_normalize_vec2.c\
 		ft_sub_vec2.c\
 		ft_mul_vec2.c\
-		ft_parse_vec2.c\
-		ft_refract_vec3.c
+		ft_parse_vec2.c
 
 MATRIX_SRC = ft_create_rot_mat4.c\
 		ft_create_rotx_mat4.c\
@@ -231,7 +232,8 @@ HT_SRCDIR = $(SRCDIR)/hashtable
 Q_SRCDIR = $(SRCDIR)/queue
 ST_SRCDIR = $(SRCDIR)/stack
 PF_SRCDIR = $(SRCDIR)/ft_printf
-VEC3_SRCDIR = $(SRCDIR)/vector
+VEC2_SRCDIR = $(SRCDIR)/vec2
+VEC3_SRCDIR = $(SRCDIR)/vec3
 MATRIX_SRCDIR = $(SRCDIR)/matrix
 COLOR_SRCDIR = $(SRCDIR)/color
 

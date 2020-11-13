@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_trans_mat4.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkorande <wkorande@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 10:53:48 by wkorande          #+#    #+#             */
-/*   Updated: 2020/01/21 10:54:12 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/13 23:04:44 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
-#include "vector.h"
+#include "vec3.h"
 
 t_mat4x4	ft_create_trans_mat4(t_vec3 translation)
 {
