@@ -6,13 +6,13 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 14:03:27 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:02:23 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/15 11:48:08 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec3.h"
 
-t_vec3	ft_mul_vec3(t_vec3 v, double t)
+t_vec3	ft_mul_vec3(t_vec3 v, float t)
 {
 	t_vec3 new;
 

@@ -6,15 +6,15 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 14:05:16 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:02:03 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/15 11:47:50 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec3.h"
 
-double	ft_dot_vec3(t_vec3 v1, t_vec3 v2)
+float	ft_dot_vec3(t_vec3 v1, t_vec3 v2)
 {
-	double dot;
+	float dot;
 
 	dot = (v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z);
 	return (dot);

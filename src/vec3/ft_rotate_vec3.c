@@ -6,7 +6,7 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 20:56:32 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:02:51 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/15 11:48:44 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <math.h>
 
-t_vec3	ft_rotate_vec3_x(t_vec3 v, double a)
+t_vec3	ft_rotate_vec3_x(t_vec3 v, float a)
 {
 	t_vec3 res;
 
@@ -24,7 +24,7 @@ t_vec3	ft_rotate_vec3_x(t_vec3 v, double a)
 	return (res);
 }
 
-t_vec3	ft_rotate_vec3_y(t_vec3 v, double a)
+t_vec3	ft_rotate_vec3_y(t_vec3 v, float a)
 {
 	t_vec3 res;
 
@@ -34,7 +34,7 @@ t_vec3	ft_rotate_vec3_y(t_vec3 v, double a)
 	return (res);
 }
 
-t_vec3	ft_rotate_vec3_z(t_vec3 v, double a)
+t_vec3	ft_rotate_vec3_z(t_vec3 v, float a)
 {
 	t_vec3 res;
 

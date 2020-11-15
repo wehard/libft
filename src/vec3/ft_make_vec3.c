@@ -6,13 +6,13 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 14:01:09 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:02:14 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/15 11:48:02 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec3.h"
 
-t_vec3	ft_make_vec3(double x, double y, double z)
+t_vec3	ft_make_vec3(float x, float y, float z)
 {
 	t_vec3 v;
 

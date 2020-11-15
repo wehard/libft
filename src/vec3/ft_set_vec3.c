@@ -6,13 +6,13 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 14:01:38 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:02:56 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/15 11:48:52 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec3.h"
 
-void	ft_set_vec3(t_vec3 *v, double x, double y, double z)
+void	ft_set_vec3(t_vec3 *v, float x, float y, float z)
 {
 	v->x = x;
 	v->y = y;

@@ -6,7 +6,7 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 13:49:30 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:02:43 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/15 11:49:48 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include "libft.h"
 #include <math.h>
 
-t_vec3	ft_refract_vec3(t_vec3 i, t_vec3 normal, double ior)
+t_vec3	ft_refract_vec3(t_vec3 i, t_vec3 normal, float ior)
 {
-	double cosi;
-	double etai;
-	double etat;
-	double eta;
-	double k;
+	float cosi;
+	float etai;
+	float etat;
+	float eta;
+	float k;
 
 	cosi = ft_clamp_d(ft_dot_vec3(i, normal), -1, 1);
 	etai = 1;
@@ -29,7 +29,7 @@ t_vec3	ft_refract_vec3(t_vec3 i, t_vec3 normal, double ior)
 		cosi = -cosi;
 	else
 	{
-		ft_swap_d(&etai, &etat);
+		ft_swap_f(&etai, &etat);
 		normal = ft_invert_vec3(normal);
 	}
 	eta = etai / etat;
