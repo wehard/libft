@@ -6,16 +6,16 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 14:24:56 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:01:00 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/22 14:02:05 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec2.h"
 #include <math.h>
 
-double	ft_len_vec2(t_vec2 v)
+float	ft_len_vec2(t_vec2 v)
 {
-	double l;
+	float l;
 
 	if (v.x == 0.0 && v.y == 0.0)
 		return (0.0);

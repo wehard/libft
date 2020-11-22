@@ -6,7 +6,7 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 18:15:48 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:01:21 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/22 14:08:23 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ t_vec2	ft_parse_vec2(char *str)
 	if ((!token) && (!(v.x = 0)))
 		ft_putendl("Couldn't parse vector2 x, set to 0");
 	else
-		v.x = ft_strtod(token);
+		v.x = (float)ft_strtod(token);
 	token = ft_strtok(NULL, " ");
 	if ((!token) && (!(v.y = 0)))
 		ft_putendl("Couldn't parse vector2 y, set to 0");
 	else
-		v.y = ft_strtod(token);
+		v.y = (float)ft_strtod(token);
 	return (v);
 }

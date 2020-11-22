@@ -6,13 +6,13 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:49:54 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:01:13 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/22 14:02:21 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec2.h"
 
-t_vec2	ft_mul_vec2(t_vec2 v, double t)
+t_vec2	ft_mul_vec2(t_vec2 v, float t)
 {
 	t_vec2 new;
 

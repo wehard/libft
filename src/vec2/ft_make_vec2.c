@@ -6,13 +6,13 @@
 /*   By: wkorande <willehard@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:37:08 by wkorande          #+#    #+#             */
-/*   Updated: 2020/11/13 23:01:04 by wkorande         ###   ########.fr       */
+/*   Updated: 2020/11/22 14:02:11 by wkorande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vec2.h"
 
-t_vec2	ft_make_vec2(double x, double y)
+t_vec2	ft_make_vec2(float x, float y)
 {
 	t_vec2 v;
 

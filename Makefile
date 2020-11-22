@@ -6,7 +6,7 @@
 #    By: wkorande <willehard@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 15:22:37 by wkorande          #+#    #+#              #
-#    Updated: 2020/11/13 23:06:43 by wkorande         ###   ########.fr        #
+#    Updated: 2020/11/22 14:16:05 by wkorande         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -244,6 +244,7 @@ SRCS =	$(addprefix $(SRCDIR)/, $(SRC))\
 		$(addprefix $(Q_SRCDIR)/, $(Q_SRC))\
 		$(addprefix $(ST_SRCDIR)/, $(ST_SRC))\
 		$(addprefix $(PF_SRCDIR)/, $(PF_SRC))\
+		$(addprefix $(VEC2_SRCDIR)/, $(VEC2_SRC))\
 		$(addprefix $(VEC3_SRCDIR)/, $(VEC3_SRC))\
 		$(addprefix $(MATRIX_SRCDIR)/, $(MATRIX_SRC))\
 		$(addprefix $(COLOR_SRCDIR)/, $(COLOR_SRC))
