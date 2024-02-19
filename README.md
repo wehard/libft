@@ -1,57 +1,44 @@
 # libft
 
-Hive Helsinki Project: Implementation of various libc functions. Also includes implementation of printf as well as functions for vector and matrix operations
+## Overview
 
-#### From the project subject:
->C programming can be very tedious when one doesn’t have access to those highly useful
->standard functions. This project makes you to take the time to re-write those functions,
->understand them, and learn to use them. This library will help you for all your future C
->projects.
+The libft project, part of the Hive Helsinki curriculum, involves the implementation of various libc functions. This endeavor not only includes the recreation of standard C library functions but also extends to the implementation of printf, alongside functions for vector and matrix operations. The primary goal of this project is to deepen the understanding of these fundamental functions by rewriting them, thereby enhancing the learning experience for all future C programming projects.
 
-Libc functions | Additional functions | Bonus Functions | Personal Functions |
-|:--------------|:--------------|:--------------|:------------------
-|ft_memset		|ft_memalloc	|ft_lstnew		|ft_abs_d
-|ft_bzero		|ft_memdel		|ft_lstdelone	|ft_clamp_d
-|ft_memcpy		|ft_strnew		|ft_lstdel		|ft_dtoa
-|ft_memccpy		|ft_strdel		|ft_lstadd		|ft_get_next_line
-|ft_memmove		|ft_strclr		|ft_lstiter		|ft_inv_lerp_d
-|ft_memchr		|ft_striter		|ft_lstmap		|ft_inv_lerp_f
-|ft_memcmp		|ft_striteri	|				|ft_itoa_base
-|ft_strlen		|ft_strmap		|				|ft_itoa_base_ull
-|ft_strdup		|ft_strmapi		|				|ft_itoa_ll
-|ft_strcpy		|ft_strequ		|				|ft_itoa_ull
-|ft_strncpy		|ft_strnequ		|				|ft_lerp_d
-|ft_strcat		|ft_strsub		|				|ft_lerp_f
-|ft_strlcat		|ft_strjoin		|				|ft_make_pair_d
-|ft_strchr		|ft_strtrim		|				|ft_map_range
-|ft_strrchr		|ft_strsplit	|				|ft_max
-|ft_strstr		|ft_itoa		|				|ft_max_d
-|ft_strnstr		|ft_putchar		|				|ft_min
-|ft_strcmp		|ft_putstr		|				|ft_ndigits_base
-|ft_strncmp		|ft_putendl		|				|ft_ndigits_base_ll
-|ft_atoi		|ft_putnbr		|				|ft_ndigits_base_ull
-|ft_isalpha		|ft_putchar_fd	|				|ft_ndigits
-|ft_isdigit		|ft_putstr_fd	|				|ft_ndigits_d
-|ft_isalnum		|ft_putendl_fd	|				|ft_nwords
-|ft_isascii		|ft_putnbr_fd	|				|ft_pow
-|ft_isprint		|				|				|ft_strrev
-|ft_toupper		|				|				|ft_strtod
-|ft_tolower		|				|				|ft_strtok
-|				|				|				|ft_swap_d
-|				|				|				|ft_swap_f
+## Project Objectives
 
-ft_printf		|vector				|matrix
-|:--------------|:------------------|:------------------
-|ft_printf		|ft_add_vec3		|ft_create_rot_mat4
-|ft_sprintf		|ft_cross_vec3		|ft_create_rotx_mat4
-|ft_vsprintf	|ft_div_vec3		|ft_create_roty_mat4
-|				|ft_dot_vec3		|ft_create_rotz_mat4
-|				|ft_invert_vec3		|ft_create_scale_mat4
-|				|ft_len_vec3		|ft_create_trans_mat4
-|				|ft_make_vec3		|ft_ident_mat4
-|				|ft_mul_vec3		|ft_lookat_mat4
-|				|ft_mul_vec3_vec3	|ft_mul_dir_vec3_mat4
-|				|ft_normalize_vec3	|ft_mul_mat4_mat4
-|				|ft_reflect_vec3	|ft_mul_vec3_mat4
-|				|ft_set_vec3		|ft_trs_mat4
-|				|ft_sub_vec3		|
+C Programming Practice: The essence of this project lies in the meticulous recreation of standard library functions. This practice is aimed at fostering a deeper understanding of these functions, their underlying mechanisms, and their application.
+Library Creation: As a result of this project, students will compile a personal library of functions, libft, which will serve as a valuable tool for all future C programming endeavors.
+
+## Included Functions
+
+### Standard Libc Functions
+
+Memory management: `ft_memset, ft_bzero, ft_memcpy, ft_memccpy, ft_memmove, ft_memchr, ft_memcmp`  
+String manipulation: `ft_strlen, ft_strdup, ft_strcpy, ft_strncpy, ft_strcat, ft_strlcat, ft_strchr, ft_strrchr, ft_strstr, ft_strnstr, ft_strcmp, ft_strncmp`  
+Conversion: `ft_atoi`  
+Character checks: `ft_isalpha, ft_isdigit, ft_isalnum, ft_isascii, ft_isprint`  
+Case conversion: `ft_toupper, ft_tolower`  
+
+### Additional Functions
+
+Dynamic memory allocation: `ft_memalloc, ft_memdel`  
+String creation and manipulation: `ft_strnew, ft_strdel, ft_strclr, ft_striter, ft_striteri, ft_strmap, ft_strmapi, ft_strequ, ft_strnequ, ft_strsub, ft_strjoin, ft_strtrim, ft_strsplit, ft_itoa`  
+Output: `ft_putchar, ft_putstr, ft_putendl, ft_putnbr, ft_putchar_fd, ft_putstr_fd, ft_putendl_fd, ft_putnbr_fd`  
+
+### Bonus Functions
+
+Linked list operations: `ft_lstnew, ft_lstdelone, ft_lstdel, ft_lstadd, ft_lstiter, ft_lstmap`  
+
+## Personal Functions
+
+Mathematical and utility functions: `ft_abs_d, ft_clamp_d, ft_dtoa, ft_get_next_line, ft_inv_lerp_d, ft_inv_lerp_f, ft_itoa_base, ft_itoa_base_ull, ft_itoa_ll, ft_itoa_ull, ft_lerp_d, ft_lerp_f, ft_make_pair_d, ft_map_range, ft_max, ft_max_d, ft_min, ft_ndigits_base, ft_ndigits_base_ll, ft_ndigits_base_ull, ft_ndigits, ft_ndigits_d, ft_nwords, ft_pow, ft_strrev, ft_strtod, ft_strtok, ft_swap_d, ft_swap_f`  
+
+### printf and Vector/Matrix Operations
+
+`ft_printf, ft_sprintf, ft_vsprintf` for formatted output.
+Vector operations: `ft_add_vec3, ft_cross_vec3, ft_div_vec3, ft_dot_vec3, ft_invert_vec3, ft_len_vec3, ft_make_vec3, ft_mul_vec3, ft_mul_vec3_vec3, ft_normalize_vec3, ft_reflect_vec3, ft_set_vec3, ft_sub_vec3`  
+Matrix operations: `ft_create_rot_mat4, ft_create_rotx_mat4, ft_create_roty_mat4, ft_create_rotz_mat4, ft_create_scale_mat4, ft_create_trans_mat4, ft_ident_mat4, ft_lookat_mat4, ft_mul_dir_vec3_mat4, ft_mul_mat4_mat4, ft_mul_vec3_mat4, ft_trs_mat4`  
+
+## Conclusion
+
+The libft project is a comprehensive exercise in C programming, offering students a hands-on approach to understanding and implementing fundamental programming concepts. By recreating and extending the functionality of the standard C library, students not only enhance their programming skills but also build a personal toolkit that will support their future projects.
