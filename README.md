@@ -35,7 +35,7 @@ Mathematical and utility functions: `ft_abs_d, ft_clamp_d, ft_dtoa, ft_get_next_
 
 ### printf and Vector/Matrix Operations
 
-`ft_printf, ft_sprintf, ft_vsprintf` for formatted output.
+`ft_printf, ft_sprintf, ft_vsprintf` for formatted output.  
 Vector operations: `ft_add_vec3, ft_cross_vec3, ft_div_vec3, ft_dot_vec3, ft_invert_vec3, ft_len_vec3, ft_make_vec3, ft_mul_vec3, ft_mul_vec3_vec3, ft_normalize_vec3, ft_reflect_vec3, ft_set_vec3, ft_sub_vec3`  
 Matrix operations: `ft_create_rot_mat4, ft_create_rotx_mat4, ft_create_roty_mat4, ft_create_rotz_mat4, ft_create_scale_mat4, ft_create_trans_mat4, ft_ident_mat4, ft_lookat_mat4, ft_mul_dir_vec3_mat4, ft_mul_mat4_mat4, ft_mul_vec3_mat4, ft_trs_mat4`  
 
